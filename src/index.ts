@@ -4,10 +4,11 @@ import cors from 'cors';
 import axios from 'axios';
 import signupRouter from './routes/signup';
 import signinRouter from './routes/signin';
-import mysql from 'mysql2/promise';
-import fs from 'fs';
-import path from 'path';
+import { Logger } from './models/Logger';
 import zodiacChartRouter from './routes/zodiacChart';
+import { connection } from './database/connection';
+import { UserDatabase } from './models/UserDatabase';
+import { SignsDatabase } from './models/Signs';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -15,18 +16,6 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// Logging utility
-function logError(error: any) {
-  const logsDir = path.join(__dirname, '..', 'logs');
-  if (!fs.existsSync(logsDir)) {
-    fs.mkdirSync(logsDir);
-  }
-  const logPath = path.join(logsDir, 'error.log');
-  const logEntry = `[${new Date().toISOString()}] ${typeof error === 'string' ? error : JSON.stringify(error)}\n`;
-  fs.appendFile(logPath, logEntry, err => {
-    if (err) console.error('Failed to write to error.log:', err);
-  });
-}
 
 app.post('/chat', async (req: Request, res: Response): Promise<void> => {
   const { question } = req.body;
@@ -53,7 +42,7 @@ app.post('/chat', async (req: Request, res: Response): Promise<void> => {
     const answer = response.data.choices?.[0]?.message?.content?.trim();
     res.json({ answer });
   } catch (error: any) {
-    logError(error.response?.data || error.message); // Log error to file
+    Logger.error(error.response?.data || error.message); // Log error to file
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -83,53 +72,13 @@ async function askAndDisplay() {
     console.log("Question:", question);
     console.log("Answer:", response.data.answer);
   } catch (error: any) {
-    logError(error.response?.data || error.message); // Log error to file
-    console.error("Error:", error.response?.data || error.message);
+    Logger.error(error.response?.data || error.message); // Log error to file
+    Logger.error("Error:", error.response?.data || error.message);
   }
 }
 
-// MySQL connection setup
-const dbConfig = {
-  host: process.env.DB_HOST || '127.0.0.1',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'root',
-  database: process.env.DB_NAME || 'horoscope',
-  port: Number(process.env.DB_PORT) || 3306, // <-- add this line
-};
 
 
-
-async function initDB() {
-  const connection = await mysql.createConnection({
-    host: dbConfig.host,
-    user: dbConfig.user,
-    password: dbConfig.password,
-    port: dbConfig.port, // <-- add this line
-  });
-
-  // Create database if not exists
-  await connection.query(`CREATE DATABASE IF NOT EXISTS \`${dbConfig.database}\``);
-
-  // Use the database
-  await connection.query(`USE \`${dbConfig.database}\``);
-
-  // Create users table if not exists
-  await connection.query(`
-    CREATE TABLE IF NOT EXISTS users (
-      id INT AUTO_INCREMENT PRIMARY KEY,
-      name VARCHAR(100) NOT NULL,
-      email VARCHAR(100) NOT NULL UNIQUE,
-      password VARCHAR(255) NOT NULL,
-      dateOfBirth DATE,
-      timeOfBirth TIME,
-      city VARCHAR(100),
-      country VARCHAR(100),
-      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )
-  `);
-
-  await connection.end();
-}
 
 // Mount GraphQL endpoint at /signup
 app.use(
@@ -144,8 +93,19 @@ app.use(
 
 app.use('/zodiac-chart', zodiacChartRouter);
 
+const userDatabase = new UserDatabase(connection);
+const signsDatabase = new SignsDatabase();
+
 app.listen(PORT, async () => {
-  await initDB(); // <-- Ensure DB and table are created before server starts
+  try {
+    await userDatabase.init(); // Initialize user database
+    await signsDatabase.init(); // Initialize signs database
+    console.log("User database initialized successfully.");
+    console.log("Signs database initialized successfully.");
+  } catch (error: any) {
+    Logger.error(error);
+    console.error("Error initializing user database:", error.message || error);
+  }
   console.log(`Server running on http://localhost:${PORT}`);
   // Generate and display question/answer after server starts
 });

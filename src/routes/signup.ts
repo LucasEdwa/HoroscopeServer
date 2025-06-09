@@ -1,8 +1,10 @@
 import { Router } from 'express';
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
-import mysql from 'mysql2/promise';
-import {connection} from '../database/connection'
+import { connection } from '../database/connection';
+import { Logger } from '../models/Logger'; 
+import bcrypt from 'bcryptjs'; // Change from 'bcrypt' to 'bcryptjs'
+
 const router = Router();
 
 const schema = buildSchema(`
@@ -46,21 +48,35 @@ const root = {
     city: string;
     country: string;
   }) => {
+    const conn = await connection.getConnection();
     try {
+      await conn.beginTransaction();
 
-      await connection.execute(
-        `INSERT INTO users (name, email, password, dateOfBirth, timeOfBirth, city, country)
-         VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        [name, email, password, dateOfBirth, timeOfBirth, city, country]
+      // Hash the password before saving
+      const hashedPassword = await bcrypt.hash(password, 10);
+
+      // Insert into users (use hashedPassword)
+      const [userResult]: any = await conn.execute(
+        `INSERT INTO users (email, password, username, registered) VALUES (?, ?, ?, UNIX_TIMESTAMP())`,
+        [email, hashedPassword, name]
+      );
+      const userId = userResult.insertId;
+
+      // Insert into user_details
+      await conn.execute(
+        `INSERT INTO user_details (user_id, birthdate, birthtime, birth_city, birth_country) VALUES (?, ?, ?, ?, ?)`,
+        [userId, dateOfBirth, timeOfBirth, city, country]
       );
 
-      await connection.end();
+      await conn.commit();
 
       return {
         success: true,
         message: `User ${name} signed up successfully!`,
       };
     } catch (err: any) {
+      await conn.rollback();
+      Logger.error(err); 
       if (err.code === 'ER_DUP_ENTRY') {
         return {
           success: false,
@@ -71,6 +87,8 @@ const root = {
         success: false,
         message: 'Signup failed. ' + (err.message || ''),
       };
+    } finally {
+      conn.release();
     }
   },
 };
