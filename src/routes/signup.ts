@@ -3,7 +3,7 @@ import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
 import { connection } from '../database/connection';
 import { Logger } from '../models/Logger'; 
-import bcrypt from 'bcryptjs'; // Change from 'bcrypt' to 'bcryptjs'
+import bcrypt from 'bcryptjs'; 
 
 const router = Router();
 
