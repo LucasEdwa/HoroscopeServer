@@ -1,1 +1,186 @@
 [2025-06-10 01:31:13] ERROR: userDatabase.ensureBirthLocationColumns is not a function
+[2025-06-10 01:59:24] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(268,1): error TS2552: Cannot find name 'router'. Did you mean 'Router'?
+src/routes/zodiacChart.ts(279,16): error TS2552: Cannot find name 'router'. Did you mean 'Router'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(268,1): error TS2552: Cannot find name 'router'. Did you mean 'Router'?
+src/routes/zodiacChart.ts(279,16): error TS2552: Cannot find name 'router'. Did you mean 'Router'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-10 01:59:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(270,29): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(270,29): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-10 01:59:59] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(270,29): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(270,29): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-10 02:14:30] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:21:43] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:22:06] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:25:10] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:25:17] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:26:04] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:26:33] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:26:33] ERROR: (0 , zodiacChart_1.createUserChartIfNotExists) is not a function
+[2025-06-10 02:26:55] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:26:56] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:36:10] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:36:10] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:36:10] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:36:10] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:36:10] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:37:00] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:00] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:00] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:00] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:00] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:37:51] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:51] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:51] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:51] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:51] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:37:51] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:41:27] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:41:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:41:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:41:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:41:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:41:44] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:41:49] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:42:44] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:42:44] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:42:44] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:42:44] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:42:44] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:43:34] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:43:53] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:43:57] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:44:29] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:44:33] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:45:27] ERROR: Lock wait timeout exceeded; try restarting transaction
+[2025-06-10 02:45:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:45:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:45:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:45:27] ERROR: Deadlock found when trying to get lock; try restarting transaction
+[2025-06-10 02:46:20] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:47:12] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:47:58] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:48:52] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(156,36): error TS1109: Expression expected.
+src/routes/zodiacChart.ts(157,37): error TS1109: Expression expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(156,36): error TS1109: Expression expected.
+src/routes/zodiacChart.ts(157,37): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-10 02:49:31] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(6,37): error TS2307: Cannot find module 'astronomia' or its corresponding type declarations.
+src/routes/zodiacChart.ts(157,36): error TS1109: Expression expected.
+src/routes/zodiacChart.ts(158,37): error TS1109: Expression expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(6,37): error TS2307: Cannot find module 'astronomia' or its corresponding type declarations.
+src/routes/zodiacChart.ts(157,36): error TS1109: Expression expected.
+src/routes/zodiacChart.ts(158,37): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-10 02:49:38] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(6,37): error TS2307: Cannot find module 'astronomia' or its corresponding type declarations.
+src/routes/zodiacChart.ts(157,36): error TS1109: Expression expected.
+src/routes/zodiacChart.ts(158,37): error TS1109: Expression expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(6,37): error TS2307: Cannot find module 'astronomia' or its corresponding type declarations.
+src/routes/zodiacChart.ts(157,36): error TS1109: Expression expected.
+src/routes/zodiacChart.ts(158,37): error TS1109: Expression expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-7879043831397199.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-10 02:52:19] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-10 02:52:20] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:07:20] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:08:17] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:09:52] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:09:54] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:14:40] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:14:41] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:27:19] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:27:20] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:27:38] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 17:44:02] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-11 18:10:43] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-22 21:48:26] ERROR: Duplicate entry 'Aries' for key 'signs.name'

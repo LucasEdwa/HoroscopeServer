@@ -4,6 +4,7 @@ import { buildSchema } from 'graphql';
 import { connection } from '../database/connection';
 import { Logger } from '../models/Logger'; 
 import bcrypt from 'bcryptjs'; 
+import zodiacChartRouter, { createUserChartPointsIfNotExists } from './zodiacChart';
 
 const router = Router();
 
@@ -49,8 +50,11 @@ const root = {
     country: string;
   }) => {
     const conn = await connection.getConnection();
+    let transactionStarted = false;
+    let userId: number | null = null;
     try {
       await conn.beginTransaction();
+      transactionStarted = true;
 
       // Hash the password before saving
       const hashedPassword = await bcrypt.hash(password, 10);
@@ -60,7 +64,7 @@ const root = {
         `INSERT INTO users (email, password, username, registered) VALUES (?, ?, ?, UNIX_TIMESTAMP())`,
         [email, hashedPassword, name]
       );
-      const userId = userResult.insertId;
+      userId = userResult.insertId;
 
       // Insert into user_details
       await conn.execute(
@@ -69,13 +73,19 @@ const root = {
       );
 
       await conn.commit();
+      transactionStarted = false;
+
+      // Create user chart OUTSIDE the transaction
+      if (userId !== null) {
+        await createUserChartPointsIfNotExists(userId, dateOfBirth, timeOfBirth, city, country);
+      }
 
       return {
         success: true,
         message: `User ${name} signed up successfully!`,
       };
     } catch (err: any) {
-      await conn.rollback();
+      if (transactionStarted) await conn.rollback();
       Logger.error(err); 
       if (err.code === 'ER_DUP_ENTRY') {
         return {

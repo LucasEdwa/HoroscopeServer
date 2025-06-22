@@ -5,16 +5,17 @@ import axios from 'axios';
 import signupRouter from './routes/signup';
 import signinRouter from './routes/signin';
 import { Logger } from './models/Logger';
-import zodiacChartRouter from './routes/zodiacChart';
 import { connection } from './database/connection';
 import { UserDatabase } from './models/UserDatabase';
 import { SignsDatabase } from './models/Signs';
+import userRouter from './routes/user'; 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
 
 
 app.post('/chat', async (req: Request, res: Response): Promise<void> => {
@@ -80,7 +81,7 @@ async function askAndDisplay() {
 
 
 
-// Mount GraphQL endpoint at /signup
+// Mount GraphQL endpoint
 app.use(
   '/signup',
   signupRouter
@@ -91,15 +92,16 @@ app.use(
   signinRouter
 );
 
-app.use('/zodiac-chart', zodiacChartRouter);
+
+app.use('/user', userRouter);
 
 const userDatabase = new UserDatabase(connection);
 const signsDatabase = new SignsDatabase();
 
 app.listen(PORT, async () => {
   try {
-    await userDatabase.init(); // Initialize user database
-    await signsDatabase.init(); // Initialize signs database
+    await userDatabase.init();
+    await signsDatabase.init();
     console.log("User database initialized successfully.");
     console.log("Signs database initialized successfully.");
   } catch (error: any) {
