@@ -1,11 +1,7 @@
 /// <reference path="../../types/express/index.d.ts" />
-import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
 import { connection } from '../database/connection';
-
-
-
+import { getFullChartPointsWithSwisseph } from './fullChartPointsController';
 
 
 // GraphQL Signup
@@ -73,7 +69,7 @@ export const signinUser = async ({
   }
 };
 
-// GraphQL resolver for user details by email
+// GraphQL resolver for user details by email, including chart points
 export const getUserDetails = async ({ email }: { email: string }) => {
   const [rows]: any = await connection.execute(
     `SELECT u.id, u.email, u.username, ud.birthdate, ud.birthtime, ud.birth_city, ud.birth_country
@@ -84,7 +80,34 @@ export const getUserDetails = async ({ email }: { email: string }) => {
   );
   if (!Array.isArray(rows) || rows.length === 0) return null;
   const user = rows[0];
-  // Optionally fetch chart points here if needed for your schema
+
+  // Fetch all sign descriptions and build a map
+  let signDescriptions: Record<string, string> = {};
+  try {
+    const [signRows]: any = await connection.execute(
+      `SELECT name, description FROM signs`
+    );
+    for (const row of signRows) {
+      signDescriptions[row.name?.toLowerCase()] = row.description;
+    }
+  } catch (e) {
+    // fallback: leave signDescriptions empty
+  }
+
+  // Fetch chart points using fullChartPointsController
+  let chartPoints: any[] = [];
+  try {
+    const rawPoints = await getFullChartPointsWithSwisseph(email);
+    chartPoints = rawPoints.map((point: any) => ({
+      ...point,
+      description: point.sign
+        ? signDescriptions[point.sign.toLowerCase()] || null
+        : null,
+    }));
+  } catch (e) {
+    chartPoints = [];
+  }
+
   return {
     id: user.id,
     email: user.email,
@@ -95,6 +118,6 @@ export const getUserDetails = async ({ email }: { email: string }) => {
     birthtime: user.birthtime,
     birth_city: user.birth_city,
     birth_country: user.birth_country,
-    // chartPoints: ... (fetch if needed)
+    chartPoints,
   };
 };

@@ -1,11 +1,8 @@
 import swisseph from 'swisseph';
-import axios from 'axios';
 import { getUserChartByEmail } from './astronomiaController';
 import { connection } from '../database/connection';
 
-// Set your ephemeris path (update this to your actual path)
-swisseph.swe_set_ephe_path('/path/to/ephemeris/files'); // Make sure this path points to the directory containing the .se1 ephemeris files
-
+swisseph.swe_set_ephe_path('/path/to/ephemeris/files'); 
 const PLANETS = [
   { type: 'sun', id: swisseph.SE_SUN },
   { type: 'moon', id: swisseph.SE_MOON },
@@ -86,15 +83,15 @@ export async function getFullChartPointsWithSwisseph(email: string) {
   let latitude = chart.latitude;
   let longitude = chart.longitude;
 
-  // --- DEBUG: Log all location/time values for troubleshooting ---
-  console.log({
-    latitude,
-    longitude,
-    birthdate: chart.birthdate,
-    birthtime: chart.birthtime,
-    birth_city: chart.birth_city,
-    birth_country: chart.birth_country
-  });
+//   // --- DEBUG: Log all location/time values for troubleshooting ---
+//   console.log({
+//     latitude,
+//     longitude,
+//     birthdate: chart.birthdate,
+//     birthtime: chart.birthtime,
+//     birth_city: chart.birth_city,
+//     birth_country: chart.birth_country
+//   });
 
   // Ensure longitude is negative for western hemisphere
   if (longitude > 0 && (
@@ -108,9 +105,6 @@ export async function getFullChartPointsWithSwisseph(email: string) {
     longitude = -Math.abs(longitude);
   }
 
-  // --- DEBUG: Log longitude after sign correction ---
-  console.log({ longitude_corrected: longitude });
-
   // Get timezone using GeoNames Timezone API if not present
   let timezone = (chart as any).timezone;
   if (timezone === undefined || timezone === null) {
@@ -123,7 +117,7 @@ export async function getFullChartPointsWithSwisseph(email: string) {
 
   // --- DEBUG: Log timezone and UT ---
   const ut = hour + minute / 60 - timezone;
-  console.log({ timezone, ut });
+//   console.log({ timezone, ut });
 
   // Calculate Julian Day
   const jd = swisseph.swe_julday(year, month, day, ut, swisseph.SE_GREG_CAL);
@@ -140,8 +134,6 @@ export async function getFullChartPointsWithSwisseph(email: string) {
   }
   const houses = housesResult.house; // 1-based, 1..12
 
-  // --- DEBUG: Log house cusps and ascendant ---
-  console.log({ houses });
 
   // Calculate planets
   const chartPoints: { type: string, sign: string, house: number | null }[] = [];

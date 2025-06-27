@@ -73,12 +73,5 @@ router.use(
   }))
 );
 
-// Note: For GraphQL endpoints, you must use a POST request with a JSON body containing a "query" field.
-// Example curl for signup mutation:
-//
-//
-// Replace values as needed.
-//
-// This is required because GraphQL expects a query string, not plain JSON fields.
 
 export default router;

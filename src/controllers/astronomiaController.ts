@@ -110,16 +110,11 @@ export async function getUserChartByEmail(email: string) {
 }
 
 /**
- * Get user Astronomia chart data
+ * GraphQL resolver for user chart by email
  */
-export const getUserAstronomiaChart = async (req: Request, res: Response) => {
-  const { email } = req.body;
-  if (!email) return res.status(400).json({ error: 'Email is required.' });
-
-  try {
-    const chart = await getUserChartByEmail(email);
-    res.json({ chart });
-  } catch (error: any) {
-    res.status(404).json({ error: error.message || 'Error generating chart' });
+export const getUserAstronomiaChartGraphQL = async ({ email }: { email: string }) => {
+  if (!email) {
+    throw new Error('Email is required.');
   }
+  return await getUserChartByEmail(email);
 };

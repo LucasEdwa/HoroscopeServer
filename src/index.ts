@@ -1,16 +1,15 @@
 import 'dotenv/config'; 
-import express, {Request,Response} from 'express';
+import express from 'express';
 import cors from 'cors';
-import axios from 'axios';
 import { graphqlHTTP } from 'express-graphql';
 
-import { Logger } from './models/Logger';
 import { connection } from './database/connection';
+
+import { Logger } from './models/Logger';
 import { UserDatabase } from './models/UserDatabase';
 import { SignsDatabase } from './models/Signs';
-import userRouter from './routes/user'; 
 
-import astronomiaRouter from './routes/astronomia';
+import userRouter from './routes/user'; 
 import { schema as fullChartPointsSchema, root as fullChartPointsRoot } from './routes/fullChartPoints';
 
 
@@ -21,11 +20,8 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (_req, res) => {
-  res.send('HoroscopeServer ChatGPT API is running.');
-});
 
-// Mount GraphQL endpoint for full chart points BEFORE any '/' routes
+
 app.use(
   '/full-chart-points',
   graphqlHTTP({
@@ -37,7 +33,6 @@ app.use(
 
 app.use('/user', userRouter);
 ;
-app.use('/', astronomiaRouter);
 
 // Function to generate a random question
 function generateQuestion(): string {
@@ -53,19 +48,19 @@ function generateQuestion(): string {
 
 
 
-// Function to send question to /chat and log the answer
-async function askAndDisplay() {
-  const question = generateQuestion();
-  try {
-    const response = await axios.post(`http://localhost:${PORT}/chat`, { question });
-    console.log("Question:", question);
-    console.log("Answer:", response.data.answer);
-  } catch (error: any) {
-    Logger.error(error.response?.data || error.message); // Log error to file
-    Logger.error("Error:", error.response?.data || error.message);
-  }
+// // Function to send question to /chat and log the answer
+// async function askAndDisplay() {
+//   const question = generateQuestion();
+//   try {
+//     const response = await axios.post(`http://localhost:${PORT}/chat`, { question });
+//     console.log("Question:", question);
+//     console.log("Answer:", response.data.answer);
+//   } catch (error: any) {
+//     Logger.error(error.response?.data || error.message); // Log error to file
+//     Logger.error("Error:", error.response?.data || error.message);
+//   }
 
-}
+// }
 
 const userDatabase = new UserDatabase(connection);
 const signsDatabase = new SignsDatabase();
