@@ -184,3 +184,1099 @@ src/routes/zodiacChart.ts(158,37): error TS1109: Expression expected.
 [2025-06-11 17:44:02] ERROR: Duplicate entry 'Aries' for key 'signs.name'
 [2025-06-11 18:10:43] ERROR: Duplicate entry 'Aries' for key 'signs.name'
 [2025-06-22 21:48:26] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-22 21:55:44] ERROR: Duplicate entry 'Aries' for key 'signs.name'
+[2025-06-22 22:01:32] ERROR: Table 'horoscope.user_chart_points' doesn't exist
+[2025-06-22 22:01:59] ERROR: Duplicate entry 'Lucas.eduardo@123.123' for key 'users.email'
+[2025-06-22 22:02:13] ERROR: Request failed with status code 401
+[2025-06-22 22:02:19] ERROR: Duplicate entry 'Lucas.eduardo@123.se' for key 'users.email'
+[2025-06-22 22:04:42] ERROR: Request failed with status code 401
+[2025-06-22 22:08:32] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(168,7): error TS2554: Expected 2 arguments, but got 5.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(168,7): error TS2554: Expected 2 arguments, but got 5.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40577605077793133.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40577605077793133.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40577605077793133.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-22 22:09:25] ERROR: Duplicate entry 'testuser@example.com' for key 'users.email'
+[2025-06-22 22:11:16] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(168,7): error TS2554: Expected 2 arguments, but got 5.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(168,7): error TS2554: Expected 2 arguments, but got 5.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40577605077793133.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40577605077793133.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40577605077793133.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-22 22:20:04] ERROR: Duplicate entry 'lucas.eduardo@gmail.com' for key 'users.email'
+[2025-06-22 22:25:03] ERROR: [object Object]
+[2025-06-22 22:27:54] ERROR: [object Object]
+[2025-06-22 22:28:41] ERROR: [object Object]
+[2025-06-22 23:02:54] ERROR: Table 'horoscope.user_chart_points' doesn't exist
+[2025-06-22 23:15:10] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-22 23:15:15] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-22 23:18:07] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-40656695739521287.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-22 23:18:37] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-05229138025429325.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-05229138025429325.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-05229138025429325.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:43:22] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(48,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(48,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:43:46] ERROR: uncaughtException: Cannot find module '../types/user'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../types/user'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:5:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+[2025-06-27 17:44:30] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(47,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(47,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:44:34] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(47,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(47,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:44:53] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:45:39] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(5,59): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:46:12] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:46:12] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:46:12] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:46:12] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:47:34] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:47:34] ERROR: signsDatabase.init is not a function
+[2025-06-27 17:47:35] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:47:35] ERROR: signsDatabase.init is not a function
+[2025-06-27 17:48:09] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:48:09] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:48:10] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:48:10] ERROR: signsDatabase.init is not a function
+[2025-06-27 17:49:25] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:49:25] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:49:25] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:49:27] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:49:27] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:49:27] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:50:11] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:50:11] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:50:11] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:52:31] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(9,8): error TS2306: File '/Users/lucaseduardo/HoroscopeServer/src/controllers/zodiacChartController.ts' is not a module.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(9,8): error TS2306: File '/Users/lucaseduardo/HoroscopeServer/src/controllers/zodiacChartController.ts' is not a module.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:54:43] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(9,8): error TS2306: File '/Users/lucaseduardo/HoroscopeServer/src/controllers/zodiacChartController.ts' is not a module.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(9,8): error TS2306: File '/Users/lucaseduardo/HoroscopeServer/src/controllers/zodiacChartController.ts' is not a module.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:57:02] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(106,52): error TS2304: Cannot find name 'chartPoints'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(106,52): error TS2304: Cannot find name 'chartPoints'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:57:03] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(106,52): error TS2304: Cannot find name 'chartPoints'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(106,52): error TS2304: Cannot find name 'chartPoints'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:58:10] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(4,52): error TS2306: File '/Users/lucaseduardo/HoroscopeServer/src/controllers/zodiacChartController.ts' is not a module.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/zodiacChart.ts(4,52): error TS2306: File '/Users/lucaseduardo/HoroscopeServer/src/controllers/zodiacChartController.ts' is not a module.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/zodiacChart.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 17:58:50] ERROR: uncaughtException: Cannot find module './zodiacChartController'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module './zodiacChartController'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:6:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+[2025-06-27 17:59:08] ERROR: uncaughtException: Cannot find module './zodiacChartController'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module './zodiacChartController'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:6:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+[2025-06-27 17:59:18] ERROR: uncaughtException: Cannot find module './zodiacChartController'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module './zodiacChartController'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:6:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+[2025-06-27 17:59:41] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:59:41] ERROR: Unknown database 'horoscope'
+[2025-06-27 17:59:41] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:00:07] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(44,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(44,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:00:49] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(44,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(44,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:01:20] ERROR: uncaughtException: Cannot find module '../../types/express/index'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../types/express/index'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/user.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:5:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+[2025-06-27 18:01:43] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(43,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(43,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:02:06] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(45,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/userController.ts(45,22): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/userController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8451483405417164.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:02:31] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:02:31] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:02:31] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:02:37] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:02:37] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:02:37] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:04:18] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:04:18] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:04:18] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:05:22] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:05:22] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:05:22] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:05:24] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:05:24] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:05:24] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:06:34] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:06:34] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:06:34] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:06:49] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:06:49] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:06:49] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:08:10] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:08:10] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:08:10] ERROR: Unknown database 'horoscope'
+[2025-06-27 18:13:12] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/user.ts(60,43): error TS2304: Cannot find name 'getUserWithChartPointsByEmail'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/user.ts(60,43): error TS2304: Cannot find name 'getUserWithChartPointsByEmail'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/user.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:27:29] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/astronomia.ts(6,34): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/astronomia.ts(6,34): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:27:47] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/astronomia.ts(6,34): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/astronomia.ts(6,34): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>) => Promise<...>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:28:08] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:28:09] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-46471927827610915.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:28:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:29:43] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:30:19] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-32831777081735103.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:31:50] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:32:01] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:32:47] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(4,60): error TS7016: Could not find a declaration file for module 'astronomia'. '/Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/lib/index.cjs' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/astronomia` if it exists or add a new declaration (.d.ts) file containing `declare module 'astronomia';`
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:34:55] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/chartInterpretation.ts(6,38): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/chartInterpretation.ts(6,38): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/chartInterpretation.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:38:36] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,26): error TS2732: Cannot find module 'astronomia/data/vsop87Bearth.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,26): error TS2732: Cannot find module 'astronomia/data/vsop87Bearth.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:38:37] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,26): error TS2732: Cannot find module 'astronomia/data/vsop87Bearth.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,26): error TS2732: Cannot find module 'astronomia/data/vsop87Bearth.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:39:00] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,26): error TS2307: Cannot find module 'astronomia/data/vsop87Bearth.json' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,26): error TS2307: Cannot find module 'astronomia/data/vsop87Bearth.json' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:39:18] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,31): error TS2307: Cannot find module 'astronomia/data/vsop87Bearth.json' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(7,31): error TS2307: Cannot find module 'astronomia/data/vsop87Bearth.json' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:39:38] ERROR: uncaughtException: Package subpath './data/vsop87Bearth.json' is not defined by "exports" in /Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/package.json
+Error: Package subpath './data/vsop87Bearth.json' is not defined by "exports" in /Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/package.json
+    at exportsNotFound (node:internal/modules/esm/resolve:314:10)
+    at packageExportsResolve (node:internal/modules/esm/resolve:661:9)
+    at resolveExports (node:internal/modules/cjs/loader:639:36)
+    at Function._findPath (node:internal/modules/cjs/loader:741:31)
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1229:27)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+[2025-06-27 18:39:39] ERROR: uncaughtException: Package subpath './data/vsop87Bearth.json' is not defined by "exports" in /Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/package.json
+Error: Package subpath './data/vsop87Bearth.json' is not defined by "exports" in /Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/package.json
+    at exportsNotFound (node:internal/modules/esm/resolve:314:10)
+    at packageExportsResolve (node:internal/modules/esm/resolve:661:9)
+    at resolveExports (node:internal/modules/cjs/loader:639:36)
+    at Function._findPath (node:internal/modules/cjs/loader:741:31)
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1229:27)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+[2025-06-27 18:40:12] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(6,26): error TS2307: Cannot find module '../../data/vsop87Bearth.json' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(6,26): error TS2307: Cannot find module '../../data/vsop87Bearth.json' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:40:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(6,26): error TS2307: Cannot find module '../../data/vsop87Bearth.json' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/astronomiaController.ts(6,26): error TS2307: Cannot find module '../../data/vsop87Bearth.json' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 18:42:11] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:7:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+[2025-06-27 18:42:28] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:7:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+[2025-06-27 18:43:04] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:7:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+[2025-06-27 18:43:07] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:7:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+[2025-06-27 18:43:25] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.json'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:7:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5968043912363419.js:69:33)
+[2025-06-27 18:44:28] ERROR: uncaughtException: Package subpath './data/vsop87Bearth.js' is not defined by "exports" in /Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/package.json
+Error: Package subpath './data/vsop87Bearth.js' is not defined by "exports" in /Users/lucaseduardo/HoroscopeServer/node_modules/astronomia/package.json
+    at exportsNotFound (node:internal/modules/esm/resolve:314:10)
+    at packageExportsResolve (node:internal/modules/esm/resolve:661:9)
+    at resolveExports (node:internal/modules/cjs/loader:639:36)
+    at Function._findPath (node:internal/modules/cjs/loader:741:31)
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1229:27)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+[2025-06-27 18:44:45] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:9:22)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+[2025-06-27 18:44:46] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:9:22)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+[2025-06-27 18:45:00] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:20:22)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+[2025-06-27 18:46:04] ERROR: uncaughtException: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+Error: Cannot find module '../../data/vsop87Bearth.js'
+Require stack:
+- /Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts
+- /Users/lucaseduardo/HoroscopeServer/src/routes/astronomia.ts
+- /Users/lucaseduardo/HoroscopeServer/src/index.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1243:15)
+    at Function._load (node:internal/modules/cjs/loader:1068:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Module.require (node:internal/modules/cjs/loader:1329:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/astronomiaController.ts:20:22)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+[2025-06-27 18:57:13] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/fullChartPoints.ts(7,35): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/fullChartPoints.ts(7,35): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is not assignable to parameter of type 'Application<Record<string, any>>'.
+      Type '(req: Request<{}, any, any, ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>, number>) => Promise<Response<any, Record<...>, number> | undefined>' is missing the following properties from type 'Application<Record<string, any>>': init, defaultConfiguration, engine, set, and 63 more.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/fullChartPoints.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 19:03:59] ERROR: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Function.use (/Users/lucaseduardo/HoroscopeServer/node_modules/router/index.js:392:13)
+    at Function.<anonymous> (/Users/lucaseduardo/HoroscopeServer/node_modules/express/lib/application.js:222:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (/Users/lucaseduardo/HoroscopeServer/node_modules/express/lib/application.js:219:7)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/index.ts:61:5)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+[2025-06-27 19:18:02] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/fullChartPointsController.ts(116,37): error TS2339: Property 'user_id' does not exist on type '{ sun: { longitude: number; sign: string; }; birthdate: any; birthtime: any; birth_city: any; birth_country: any; latitude: any; longitude: any; }'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/fullChartPointsController.ts(116,37): error TS2339: Property 'user_id' does not exist on type '{ sun: { longitude: number; sign: string; }; birthdate: any; birthtime: any; birth_city: any; birth_country: any; latitude: any; longitude: any; }'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/fullChartPointsController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-27 19:32:55] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/fullChartPointsController.ts(167,2): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/fullChartPointsController.ts(167,2): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/fullChartPointsController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)

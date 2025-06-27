@@ -2,55 +2,42 @@ import 'dotenv/config';
 import express, {Request,Response} from 'express';
 import cors from 'cors';
 import axios from 'axios';
-import signupRouter from './routes/signup';
-import signinRouter from './routes/signin';
+import { graphqlHTTP } from 'express-graphql';
+
 import { Logger } from './models/Logger';
 import { connection } from './database/connection';
 import { UserDatabase } from './models/UserDatabase';
 import { SignsDatabase } from './models/Signs';
 import userRouter from './routes/user'; 
 
+import astronomiaRouter from './routes/astronomia';
+import { schema as fullChartPointsSchema, root as fullChartPointsRoot } from './routes/fullChartPoints';
+
+
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 
 app.use(cors());
 app.use(express.json());
 
-
-
-app.post('/chat', async (req: Request, res: Response): Promise<void> => {
-  const { question } = req.body;
-  if (!question) {
-    res.status(400).json({ error: 'Question is required.' });
-    return;
-  }
-
-  try {
-    const response = await axios.post(
-      'https://api.openai.com/v1/chat/completions',
-      {
-        model: 'gpt-3.5-turbo',
-        messages: [{ role: 'user', content: question }],
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        },
-      }
-    );
-
-    const answer = response.data.choices?.[0]?.message?.content?.trim();
-    res.json({ answer });
-  } catch (error: any) {
-    Logger.error(error.response?.data || error.message); // Log error to file
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
 app.get('/', (_req, res) => {
   res.send('HoroscopeServer ChatGPT API is running.');
 });
+
+// Mount GraphQL endpoint for full chart points BEFORE any '/' routes
+app.use(
+  '/full-chart-points',
+  graphqlHTTP({
+    schema: fullChartPointsSchema,
+    rootValue: fullChartPointsRoot,
+    graphiql: true,
+  })
+);
+
+app.use('/user', userRouter);
+;
+app.use('/', astronomiaRouter);
 
 // Function to generate a random question
 function generateQuestion(): string {
@@ -65,6 +52,7 @@ function generateQuestion(): string {
 }
 
 
+
 // Function to send question to /chat and log the answer
 async function askAndDisplay() {
   const question = generateQuestion();
@@ -76,32 +64,19 @@ async function askAndDisplay() {
     Logger.error(error.response?.data || error.message); // Log error to file
     Logger.error("Error:", error.response?.data || error.message);
   }
+
 }
-
-
-
-
-// Mount GraphQL endpoint
-app.use(
-  '/signup',
-  signupRouter
-);
-
-app.use(
-  '/signin',
-  signinRouter
-);
-
-
-app.use('/user', userRouter);
 
 const userDatabase = new UserDatabase(connection);
 const signsDatabase = new SignsDatabase();
+
+
 
 app.listen(PORT, async () => {
   try {
     await userDatabase.init();
     await signsDatabase.init();
+    // await userDatabase.dropAllUserRelatedTables();
     console.log("User database initialized successfully.");
     console.log("Signs database initialized successfully.");
   } catch (error: any) {
