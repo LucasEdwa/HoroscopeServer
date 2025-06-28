@@ -10,6 +10,7 @@ import { UserDatabase } from './models/UserDatabase';
 import { SignsDatabase } from './models/Signs';
 
 import userRouter from './routes/user'; 
+import oracleRouter from './routes/oracle';
 import { schema as fullChartPointsSchema, root as fullChartPointsRoot } from './routes/fullChartPoints';
 
 
@@ -32,35 +33,9 @@ app.use(
 );
 
 app.use('/user', userRouter);
+app.use('/oracle', oracleRouter);
+
 ;
-
-// Function to generate a random question
-function generateQuestion(): string {
-  const questions = [
-    "What does my horoscope say for today?",
-    "Will I have good luck this week?",
-    "What should I focus on according to my zodiac sign?",
-    "Is there anything I should be careful about today?",
-    "How will my relationships go this month?"
-  ];
-  return questions[Math.floor(Math.random() * questions.length)];
-}
-
-
-
-// // Function to send question to /chat and log the answer
-// async function askAndDisplay() {
-//   const question = generateQuestion();
-//   try {
-//     const response = await axios.post(`http://localhost:${PORT}/chat`, { question });
-//     console.log("Question:", question);
-//     console.log("Answer:", response.data.answer);
-//   } catch (error: any) {
-//     Logger.error(error.response?.data || error.message); // Log error to file
-//     Logger.error("Error:", error.response?.data || error.message);
-//   }
-
-// }
 
 const userDatabase = new UserDatabase(connection);
 const signsDatabase = new SignsDatabase();
