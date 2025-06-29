@@ -8,10 +8,12 @@ import { connection } from './database/connection';
 import { Logger } from './models/Logger';
 import { UserDatabase } from './models/UserDatabase';
 import { SignsDatabase } from './models/Signs';
+import { DailyNews } from './models/dailyNews';
 
 import userRouter from './routes/user'; 
 import oracleRouter from './routes/oracle';
 import { schema as fullChartPointsSchema, root as fullChartPointsRoot } from './routes/fullChartPoints';
+import dailyNewsRouter from './routes/dailyNews';
 
 
 const app = express();
@@ -34,6 +36,7 @@ app.use(
 
 app.use('/user', userRouter);
 app.use('/oracle', oracleRouter);
+app.use('/daily-news', dailyNewsRouter);
 
 ;
 
@@ -46,9 +49,11 @@ app.listen(PORT, async () => {
   try {
     await userDatabase.init();
     await signsDatabase.init();
+    await DailyNews.setupDailyNewsTable(); 
     // await userDatabase.dropAllUserRelatedTables();
     console.log("User database initialized successfully.");
     console.log("Signs database initialized successfully.");
+    console.log("Daily news table initialized successfully.");
   } catch (error: any) {
     Logger.error(error);
     console.error("Error initializing user database:", error.message || error);

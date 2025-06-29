@@ -2,6 +2,7 @@
 import bcrypt from 'bcryptjs';
 import { connection } from '../database/connection';
 import { getFullChartPointsWithSwisseph } from './fullChartPointsController';
+import { UserDatabase } from '../models/UserDatabase';
 
 
 // GraphQL Signup
@@ -50,6 +51,8 @@ type SigninArgs = {
   password: string;
 };
 
+const userDatabase = new UserDatabase(connection);
+
 export const signinUser = async ({
   email,
   password,
@@ -63,6 +66,7 @@ export const signinUser = async ({
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return { success: false, message: 'Invalid credentials', email: null };
     }
+    await userDatabase.updateLastLogin(user.id);
     return { success: true, message: 'Sign in successful!', email: user.email };
   } catch (error: any) {
     return { success: false, message: error.message || 'Internal server error', email: null };
@@ -99,7 +103,9 @@ export const getUserDetails = async ({ email }: { email: string }) => {
   try {
     const rawPoints = await getFullChartPointsWithSwisseph(email);
     chartPoints = rawPoints.map((point: any) => ({
-      ...point,
+      pointType: point.type || point.pointType || null, 
+      sign: point.sign,
+      house: point.house,
       description: point.sign
         ? signDescriptions[point.sign.toLowerCase()] || null
         : null,

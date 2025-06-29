@@ -1,0 +1,99 @@
+[2025-06-29 12:59:54] INFO: Updated last_login for userId=2
+[2025-06-29 13:35:22] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/dailyNews.ts(2,24): error TS2724: '"../controllers/dailyNewsController"' has no exported member named 'createDailyNews'. Did you mean 'getDailyNews'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/dailyNews.ts(2,24): error TS2724: '"../controllers/dailyNewsController"' has no exported member named 'createDailyNews'. Did you mean 'getDailyNews'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/dailyNews.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-29 13:35:25] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/dailyNews.ts(2,24): error TS2724: '"../controllers/dailyNewsController"' has no exported member named 'createDailyNews'. Did you mean 'getDailyNews'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/dailyNews.ts(2,24): error TS2724: '"../controllers/dailyNewsController"' has no exported member named 'createDailyNews'. Did you mean 'getDailyNews'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/dailyNews.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-29 13:38:11] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/dailyNews.ts(2,24): error TS2724: '"../controllers/dailyNewsController"' has no exported member named 'createDailyNews'. Did you mean 'getDailyNews'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/routes/dailyNews.ts(2,24): error TS2724: '"../controllers/dailyNewsController"' has no exported member named 'createDailyNews'. Did you mean 'getDailyNews'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/routes/dailyNews.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-03090922543310559.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-29 13:46:08] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/dailyNewsController.ts(2,31): error TS2305: Module '"../utils/ChatOi"' has no exported member 'askDailyNews'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/dailyNewsController.ts(2,31): error TS2305: Module '"../utils/ChatOi"' has no exported member 'askDailyNews'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/dailyNewsController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-29 13:46:10] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/dailyNewsController.ts(2,31): error TS2305: Module '"../utils/ChatOi"' has no exported member 'askDailyNews'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/dailyNewsController.ts(2,31): error TS2305: Module '"../utils/ChatOi"' has no exported member 'askDailyNews'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/dailyNewsController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-06-29 13:49:01] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/dailyNewsController.ts(37,7): error TS2322: Type 'Response<any, Record<string, any>>' is not assignable to type 'void'.
+src/controllers/dailyNewsController.ts(41,7): error TS2322: Type 'Response<any, Record<string, any>>' is not assignable to type 'void'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/dailyNewsController.ts(37,7): error TS2322: Type 'Response<any, Record<string, any>>' is not assignable to type 'void'.
+src/controllers/dailyNewsController.ts(41,7): error TS2322: Type 'Response<any, Record<string, any>>' is not assignable to type 'void'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/controllers/dailyNewsController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-34343707861086936.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)

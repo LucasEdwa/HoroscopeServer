@@ -153,4 +153,18 @@ export class UserDatabase {
       console.error("Error dropping user-related tables:", error.message || error);
     }
   }
+  
+
+  async updateLastLogin(userId: number) {
+    try {
+      const [result] = await connection.query(
+        'UPDATE users SET last_login = ? WHERE id = ?',
+        [Math.floor(Date.now() / 1000), userId]
+      );
+      return result;
+    } catch (error: any) {
+      Logger.error(`Failed to update last_login for userId=${userId}: ${error.message || error}`);
+      throw error;
+    }
+  }
 }
