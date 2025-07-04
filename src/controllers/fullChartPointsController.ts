@@ -97,8 +97,7 @@ export async function getFullChartPointsWithSwisseph(email: string) {
   if (longitude > 0 && (
     (chart.birth_country && (
       chart.birth_country.toLowerCase() === 'brazil' ||
-      chart.birth_country.toLowerCase() === 'usa' ||
-      chart.birth_country.toLowerCase() === 'united states'
+      chart.birth_country.toLowerCase() === 'usa'
     )) ||
     (latitude < 0 && longitude > 0)
   )) {
