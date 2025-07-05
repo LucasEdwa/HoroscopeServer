@@ -99,6 +99,28 @@ export class UserTables {
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
     `);
   }
+
+  static async createUserChartTable() {
+    await connection.query(`
+      CREATE TABLE IF NOT EXISTS user_chart (
+        id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        user_id INT UNSIGNED NOT NULL,
+        planet_name VARCHAR(50) NOT NULL,
+        longitude DECIMAL(10, 6) NOT NULL,
+        latitude DECIMAL(10, 6) NOT NULL, 
+        sign VARCHAR(20) NOT NULL,
+        house INT NOT NULL,
+        degree INT NOT NULL,
+        minute INT NOT NULL,
+        second INT NOT NULL,
+        planet_type ENUM('planet', 'point', 'asteroid') NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+        UNIQUE KEY unique_user_planet (user_id, planet_name)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    `);
+  }
 }
 
 export class UserDatabase {
@@ -120,6 +142,7 @@ export class UserDatabase {
       await UserTables.createUsersResetsTable();
       await UserTables.createUsersThrottlingTable();
       await UserTables.createUserDetailsTable();
+      await UserTables.createUserChartTable();
     } catch (error: any) {
       Logger.error(error);
       console.error("Error setting up users table:", error.message || error);
@@ -138,8 +161,11 @@ export class UserDatabase {
 
   async dropAllUserRelatedTables() {
     try {
+      // Disable foreign key checks
+      await connection.query('SET FOREIGN_KEY_CHECKS = 0');
+
       // Drop child tables first to avoid foreign key constraint errors
-      await connection.query('DROP TABLE IF EXISTS user_chart_points');
+      await connection.query('DROP TABLE IF EXISTS daily_news');
       await connection.query('DROP TABLE IF EXISTS user_charts');
       await connection.query('DROP TABLE IF EXISTS user_details');
       await connection.query('DROP TABLE IF EXISTS users_resets');
@@ -147,6 +173,11 @@ export class UserDatabase {
       await connection.query('DROP TABLE IF EXISTS users_confirmations');
       await connection.query('DROP TABLE IF EXISTS users_throttling');
       await connection.query('DROP TABLE IF EXISTS users');
+      
+
+      // Re-enable foreign key checks
+      await connection.query('SET FOREIGN_KEY_CHECKS = 1');
+
       console.log("All user-related tables dropped.");
     } catch (error: any) {
       Logger.error(error);

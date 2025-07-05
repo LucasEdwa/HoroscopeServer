@@ -8,17 +8,7 @@ export const signsSqlStatements = [
     description TEXT DEFAULT NULL,
     PRIMARY KEY (id)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`,
-  `CREATE TABLE IF NOT EXISTS user_chart_points (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    user_id INT UNSIGNED NOT NULL,
-    point_type VARCHAR(32) NOT NULL,
-    sign_id INT UNSIGNED NOT NULL,
-    house_number INT UNSIGNED DEFAULT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (sign_id) REFERENCES signs(id)
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`
-];
+]
 
 export const zodiacSigns = [
   { name: 'Aries', description: 'Aries is the spark that ignites the zodiac, a bold pioneer charging forward like a ram breaking through barriers. Their energy is raw, direct, and unstoppable, inspiring others to take action and embrace new beginnings.' },
