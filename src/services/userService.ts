@@ -1,7 +1,5 @@
 import bcrypt from 'bcrypt';
 import { connection } from '../database/connection';
-import { calculateSwissEphChart } from '../hooks/swissephHook';
-import { geocodeLocation } from './geocodingService';
 import { calculateAndSaveUserChart } from './swissephService';
 import { User, UserBirthData, ChartPoint } from '../interfaces/userInterface';
 

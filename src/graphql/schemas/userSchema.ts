@@ -32,11 +32,19 @@ export const userTypeDefs = `
     success: Boolean!
     message: String!
     email: String
-    token: String
+    token: String!
   }
 
   type Query {
+    me: User
     user(email: String!): User
+    validateToken: TokenValidation
+  }
+
+  type TokenValidation {
+    valid: Boolean!
+    user: User
+    message: String
   }
 
   type Mutation {

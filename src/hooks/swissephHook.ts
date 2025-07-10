@@ -1,52 +1,44 @@
 import swisseph from 'swisseph';
 import fs from 'fs';
 import path from 'path';
+import { ChartPoint } from '../interfaces/userInterface';
+import {ZODIAC_SIGNS,PLANET_IDS} from '../constants/astrologyConstants';
+// Constants
+const EPHE_PATH = process.env.EPHE_PATH || path.join(__dirname, '../../ephe');
+const REQUIRED_FILE = 'seas_18.se1';
+const DEFAULT_HOUSE_SYSTEM = 'P'; // Placidus
 
-const ephePath = '/Users/lucaseduardo/HoroscopeServer/ephe';
-swisseph.swe_set_ephe_path(ephePath);
 
-// Verify that the required file exists
-const requiredFile = path.join(ephePath, 'seas_18.se1');
-if (!fs.existsSync(requiredFile)) {
-  console.error(`Required Swiss Ephemeris file not found: ${requiredFile}`);
-  throw new Error(`Swiss Ephemeris file 'seas_18.se1' is missing in path '${ephePath}'`);
+// Initialize Swiss Ephemeris
+swisseph.swe_set_ephe_path(EPHE_PATH);
+
+// Verify required file exists
+const requiredFilePath = path.join(EPHE_PATH, REQUIRED_FILE);
+if (!fs.existsSync(requiredFilePath)) {
+  throw new Error(`Swiss Ephemeris file '${REQUIRED_FILE}' is missing in path '${EPHE_PATH}'`);
 }
 
-
-export interface ChartPoint {
-  longitude: number;
-  latitude?: number; // Optional latitude property
-  sign: string;
-  degree: number;
-  minute: number;
-  second: number;
-  house?: number; // Optional house property
-  planet_type?: string; // Optional planet type property
+// Utility function for handling SwissEph errors
+function handleSwissEphError(operation: string, error: any): never {
+  console.error(`SwissEph ${operation} error:`, error);
+  throw new Error(`Failed to ${operation}: ${error.message || error}`);
 }
 
 /**
  * Calculate planetary position using SwissEph
  */
-export function calculatePlanetPosition(
-  julianDay: number,
-  planetId: number
-): number {
-  try {
-    const result = swisseph.swe_calc_ut(julianDay, planetId, swisseph.SEFLG_SWIEPH);
+export function calculatePlanetPosition(julianDay: number, planetId: number): number {
+  const result = swisseph.swe_calc_ut(julianDay, planetId, swisseph.SEFLG_SWIEPH);
 
-    if ('error' in result) {
-      throw new Error(`SwissEph calculation error: ${result.error}`);
-    }
-
-    if ('longitude' in result) {
-      return result.longitude;
-    } else {
-      throw new Error('Unexpected result format from SwissEph');
-    }
-  } catch (error: any) {
-    console.error(`Error calculating planet position for planetId=${planetId}:`, error);
-    throw new Error(`Failed to calculate planet position: ${error.message}`);
+  if ('error' in result) {
+    handleSwissEphError('calculate planet position', result.error);
   }
+
+  if (!('longitude' in result)) {
+    throw new Error('Unexpected result format from SwissEph planet calculation');
+  }
+
+  return result.longitude;
 }
 
 /**
@@ -56,24 +48,19 @@ export function calculateHouses(
   julianDay: number,
   latitude: number,
   longitude: number,
-  houseSystem: string = 'P' // Placidus by default
+  houseSystem: string = DEFAULT_HOUSE_SYSTEM
 ): { houses: number[]; ascendant: number; midheaven: number } {
-  try {
-    const result = swisseph.swe_houses(julianDay, latitude, longitude, houseSystem);
+  const result = swisseph.swe_houses(julianDay, latitude, longitude, houseSystem);
 
-    if ('error' in result) {
-      throw new Error(`SwissEph houses calculation error: ${result.error}`);
-    }
-
-    return {
-      houses: result.house,
-      ascendant: result.ascendant,
-      midheaven: result.mc
-    };
-  } catch (error: any) {
-    console.error(`Error calculating houses for latitude=${latitude}, longitude=${longitude}:`, error);
-    throw new Error(`Failed to calculate houses: ${error.message}`);
+  if ('error' in result) {
+    handleSwissEphError('calculate houses', result.error);
   }
+
+  return {
+    houses: result.house,
+    ascendant: result.ascendant,
+    midheaven: result.mc
+  };
 }
 
 /**
@@ -82,7 +69,7 @@ export function calculateHouses(
 export function dateToJulian(date: Date): number {
   const result = swisseph.swe_utc_to_jd(
     date.getFullYear(),
-    date.getMonth() + 1, // Month is 0-indexed in JavaScript so we add 1 to match SwissEph, because it expects 1-12
+    date.getMonth() + 1, // JavaScript months are 0-indexed
     date.getDate(),
     date.getHours(),
     date.getMinutes(),
@@ -91,7 +78,7 @@ export function dateToJulian(date: Date): number {
   );
   
   if ('error' in result) {
-    throw new Error(`Date to Julian conversion error: ${result.error}`);
+    handleSwissEphError('convert date to Julian', result.error);
   }
   
   return result.julianDayUT;
@@ -100,22 +87,19 @@ export function dateToJulian(date: Date): number {
 /**
  * Convert longitude to zodiac sign information
  */
-export function longitudeToSign(longitude: number): ChartPoint {
-  const signs = [
-    'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
-    'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'
-  ];
-  
+export function longitudeToSign(longitude: number): Omit<ChartPoint, 'user_id' | 'name' | 'latitude' | 'house' | 'planet_type' | 'distance'> {
   const normalizedLon = ((longitude % 360) + 360) % 360;
   const signIndex = Math.floor(normalizedLon / 30);
   const signDegree = normalizedLon % 30;
   const degree = Math.floor(signDegree);
-  const minute = Math.floor((signDegree - degree) * 60);
-  const second = Math.floor(((signDegree - degree) * 60 - minute) * 60);
+  const minuteFloat = (signDegree - degree) * 60;
+  const minute = Math.floor(minuteFloat);
+  const second = Math.floor((minuteFloat - minute) * 60);
+  
   
   return {
     longitude: normalizedLon,
-    sign: signs[signIndex],
+    sign: ZODIAC_SIGNS[signIndex],
     degree,
     minute,
     second
@@ -125,30 +109,15 @@ export function longitudeToSign(longitude: number): ChartPoint {
 /**
  * Get all main planets using SwissEph
  */
-export function getAllPlanets(julianDay: number): Record<string, ChartPoint> {
-  const planets = {
-    sun: swisseph.SE_SUN,
-    moon: swisseph.SE_MOON,
-    mercury: swisseph.SE_MERCURY,
-    venus: swisseph.SE_VENUS,
-    mars: swisseph.SE_MARS,
-    jupiter: swisseph.SE_JUPITER,
-    saturn: swisseph.SE_SATURN,
-    uranus: swisseph.SE_URANUS,
-    neptune: swisseph.SE_NEPTUNE,
-    pluto: swisseph.SE_PLUTO,
-    northNode: swisseph.SE_TRUE_NODE,
-    chiron: swisseph.SE_CHIRON
-  };
+export function getAllPlanets(julianDay: number): Record<string, Omit<ChartPoint, 'user_id' | 'name' | 'latitude' | 'house' | 'planet_type' | 'distance'>> {
+  const result: Record<string, any> = {};
   
-  const result: Record<string, ChartPoint> = {};
-  
-  for (const [planetName, planetId] of Object.entries(planets)) {
+  for (const planet of PLANET_IDS) {
     try {
-      const longitude = calculatePlanetPosition(julianDay, planetId);
-      result[planetName] = longitudeToSign(longitude);
+      const longitude = calculatePlanetPosition(julianDay, planet.id);
+      result[planet.name.toLowerCase()] = longitudeToSign(longitude);
     } catch (error) {
-      console.error(`Error calculating ${planetName}:`, error);
+      console.error(`Error calculating ${planet.name}:`, error);
       // Continue with other planets even if one fails
     }
   }
@@ -163,42 +132,112 @@ export function calculateSwissEphChart(
   birthdate: string,
   birthtime: string,
   latitude: number,
-  longitude: number
+  longitude: number,
+  timezoneOffset?: number 
 ): {
   longitude: number;
-  planets: Record<string, ChartPoint>;
-  houses: { houses: number[]; ascendant: ChartPoint; midheaven: ChartPoint };
+  planets: Record<string, Omit<ChartPoint, 'user_id' | 'name' | 'latitude' | 'house' | 'planet_type' | 'distance'>>;
+  houses: { 
+    houses: number[]; 
+    ascendant: Omit<ChartPoint, 'user_id' | 'name' | 'latitude' | 'house' | 'planet_type' | 'distance'>; 
+    midheaven: Omit<ChartPoint, 'user_id' | 'name' | 'latitude' | 'house' | 'planet_type' | 'distance'>; 
+  };
   julianDay: number;
 } {
-  if (!birthdate || !birthtime || latitude === undefined || longitude === undefined) {
-    console.error('Invalid input data for Swiss Ephemeris:', { birthdate, birthtime, latitude, longitude });
+  // Validate input parameters
+  if (!birthdate?.trim() || !birthtime?.trim() || 
+      typeof latitude !== 'number' || typeof longitude !== 'number') {
     throw new Error('Invalid input data for Swiss Ephemeris calculations');
   }
 
-  console.log('Valid input data for Swiss Ephemeris:', { birthdate, birthtime, latitude, longitude });
+  
+  // Parse date and time components
+  const [year, month, day] = birthdate.split('-').map(Number);
+  const [hours, minutes, seconds = 0] = birthtime.split(':').map(Number);
+  
 
-  // Parse date and time
-  const dateTime = `${birthdate}T${birthtime}`;
-  const date = new Date(dateTime);
+  // Use provided timezone offset or fallback to longitude-based calculation
+  const offsetHours = timezoneOffset !== undefined ? timezoneOffset : Math.round(longitude / 15);
+  // Convert local time to UTC
+  let utcHours = hours - offsetHours;
+  let utcDay = day;
+  let utcMonth = month;
+  let utcYear = year;
+  
+  // Handle hour overflow
+  if (utcHours >= 24) {
+    utcHours -= 24;
+    utcDay += 1;
+    // Simple day overflow handling
+    if (utcDay > 30) { // Simplified
+      utcDay = 1;
+      utcMonth += 1;
+      if (utcMonth > 12) {
+        utcMonth = 1;
+        utcYear += 1;
+      }
+    }
+  } else if (utcHours < 0) {
+    utcHours += 24;
+    utcDay -= 1;
+    // Simple day underflow handling
+    if (utcDay < 1) {
+      utcMonth -= 1;
+      if (utcMonth < 1) {
+        utcMonth = 12;
+        utcYear -= 1;
+      }
+      utcDay = 30; // Simplified
+    }
+  }
+  
 
-  // Convert to Julian Day
-  const julianDay = dateToJulian(date);
-  console.log('Julian Day:', julianDay);
+  // Convert to Julian Day using UTC time
+  const julianDay = swisseph.swe_utc_to_jd(
+    utcYear,
+    utcMonth,
+    utcDay,
+    utcHours,
+    minutes,
+    seconds,
+    swisseph.SE_GREG_CAL
+  );
+  
+  if ('error' in julianDay) {
+    handleSwissEphError('convert date to Julian', julianDay.error);
+  }
+  
 
-  // Calculate planets
-  const planets = getAllPlanets(julianDay);
+  // Calculate planets and houses
+  const planets = getAllPlanets(julianDay.julianDayUT);
+  const houseData = calculateHouses(julianDay.julianDayUT, latitude, longitude);
 
-  // Calculate houses
-  const houseData = calculateHouses(julianDay, latitude, longitude);
+  const ascendantSign = longitudeToSign(houseData.ascendant);
 
   return {
     longitude: houseData.ascendant,
     planets,
     houses: {
       houses: houseData.houses,
-      ascendant: longitudeToSign(houseData.ascendant),
+      ascendant: ascendantSign,
       midheaven: longitudeToSign(houseData.midheaven)
     },
-    julianDay
+    julianDay: julianDay.julianDayUT
   };
+}
+
+/**
+ * Calculate planetary positions for a given date, time, and location.
+ * Returns an object with planet names as keys and their zodiac/sign/degree info as values.
+ */
+export function getPlanetsForMoment(
+  date: Date,
+  latitude: number,
+  longitude: number
+): Record<string, Omit<ChartPoint, 'user_id' | 'name' | 'latitude' | 'house' | 'planet_type' | 'distance'>> {
+  // Convert date to Julian Day (UTC)
+  const julianDay = dateToJulian(date);
+
+  // Calculate all main planets for this moment
+  return getAllPlanets(julianDay);
 }

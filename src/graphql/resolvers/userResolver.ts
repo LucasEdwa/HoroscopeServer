@@ -2,9 +2,12 @@
 
 import { getUserByEmail, createUser, getUserForQuery } from '../../services/userService';
 import { calculateAndSaveUserChart } from '../../services/swissephService';
-import { authenticate } from '../../middleware/auth';
 import { User } from '../../interfaces/userInterface';
 import jwt from 'jsonwebtoken';
+import { Request } from 'express';
+import { requireAuth, requireOwnership } from '../../utils/authUtils';
+
+
 
 /**
  * GraphQL resolvers for user operations
@@ -18,17 +21,52 @@ try {
 
 export const userResolvers = {
   Query: {
-    async user(args: { email: string }): Promise<User | null> {
-      console.log('Debug: Received args:', args);
+    // Get current user profile (authenticated)
+    async me(args: any, context: { req: Request }): Promise<User | null> {
+      console.log('Debug: Me query called');
+      
+      const authenticatedUser = requireAuth(context);
+      console.log('Debug: Authenticated user:', authenticatedUser);
+      
+      const user = await getUserForQuery(authenticatedUser.email);
+      
+      if (user && user.chartPoints) {
+        user.chartPoints = user.chartPoints.map(point => {
+          const distance = calculatePlanetDistance(point.name);
+          
+          const mappedPoint = {
+            user_id: point.user_id,
+            name: point.name,
+            longitude: parseFloat(point.longitude.toString()),
+            latitude: parseFloat(point.latitude.toString()),
+            sign: point.sign,
+            house: point.house,
+            degree: point.degree,
+            minute: point.minute,
+            second: point.second,
+            planet_type: point.planet_type,
+            distance: distance,
+          };
+          return mappedPoint;
+        });
+      }
+      
+      return user;
+    },
+
+    // Get user by email (admin or same user only)
+    async user(args: { email: string }, context: { req: Request }): Promise<User | null> {
+      
       const { email } = args;
       if (!email) {
         console.error('Debug: Email argument is missing or undefined');
         throw new Error('Email argument is required');
       }
-      console.log('Debug: Fetching user with email:', email);
+
+      const authenticatedUser = requireAuth(context);
+      requireOwnership(authenticatedUser, email);
 
       const user = await getUserForQuery(email);
-      console.log('Debug: Fetched user with chart points:', user);
       
       // Ensure all fields are properly mapped and typed
       if (user && user.chartPoints) {
@@ -37,6 +75,7 @@ export const userResolvers = {
           console.log(`Debug: Planet '${point.name}' -> distance: ${distance}`);
           
           const mappedPoint = {
+            user_id: point.user_id,
             name: point.name,
             longitude: parseFloat(point.longitude.toString()),
             latitude: parseFloat(point.latitude.toString()),
@@ -51,11 +90,29 @@ export const userResolvers = {
           return mappedPoint;
         });
         
-        console.log('Debug: Mapped chart points sample:', JSON.stringify(user.chartPoints[0], null, 2));
-        console.log('Debug: Total chart points:', user.chartPoints.length);
       }
       
       return user;
+    },
+
+    // Validate token and return user info
+    async validateToken(args: any, context: { req: Request }) {
+      try {
+        const authenticatedUser = requireAuth(context);
+        const user = await getUserForQuery(authenticatedUser.email);
+        
+        return {
+          valid: true,
+          user: user,
+          message: 'Token is valid'
+        };
+      } catch (error: any) {
+        return {
+          valid: false,
+          user: null,
+          message: error.message || 'Invalid token'
+        };
+      }
     },
   },
 

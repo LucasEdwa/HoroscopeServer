@@ -1,13 +1,17 @@
-import { calculateSwissEphChart } from '../hooks/swissephHook';
-import { getUserBirthData } from './userService';
-import { connection } from '../database/connection';
-import { geocodeLocation } from './geocodingService';
-import { ChartPoint as UserChartPoint } from '../interfaces/userInterface';
+import { calculateSwissEphChart } from "../hooks/swissephHook";
+import { getUserBirthData } from "./userService";
+import { connection } from "../database/connection";
+import { geocodeLocation } from "./geocodingService";
+import { ChartPoint as UserChartPoint } from "../interfaces/userInterface";
+import { getCachedUserChartPoints } from "../utils/performanceOptimizations";
 
 /**
  * Calculate which house a planet is in based on longitude and house cusps
  */
-function calculateHousePosition(planetLongitude: number, houseCusps: number[]): number {
+function calculateHousePosition(
+  planetLongitude: number,
+  houseCusps: number[]
+): number {
   const normalizedLon = ((planetLongitude % 360) + 360) % 360;
 
   for (let i = 0; i < 12; i++) {
@@ -15,7 +19,8 @@ function calculateHousePosition(planetLongitude: number, houseCusps: number[]): 
     const nextHouse = houseCusps[(i + 1) % 12];
 
     if (nextHouse > currentHouse) {
-      if (normalizedLon >= currentHouse && normalizedLon < nextHouse) return i + 1;
+      if (normalizedLon >= currentHouse && normalizedLon < nextHouse)
+        return i + 1;
     } else if (normalizedLon >= currentHouse || normalizedLon < nextHouse) {
       return i + 1;
     }
@@ -24,36 +29,56 @@ function calculateHousePosition(planetLongitude: number, houseCusps: number[]): 
   return 1; // Default to first house if calculation fails
 }
 
+
 /**
  * Calculate and save user's complete astrological chart
  */
-export async function calculateAndSaveUserChart(email: string): Promise<boolean> {
+export async function calculateAndSaveUserChart(
+  email: string
+): Promise<boolean> {
   const userData = await getUserBirthData(email);
-  if (!userData) throw new Error('User birth data not found');
+  if (!userData) throw new Error("User birth data not found");
 
   const { user_id, birthdate, birthtime, birth_city, birth_country } = userData;
-  
+
   if (!birthdate || !birthtime || !birth_city || !birth_country) {
-    throw new Error('Invalid input data for Swiss Ephemeris calculations');
+    throw new Error("Invalid input data for Swiss Ephemeris calculations");
   }
 
-  const { latitude, longitude } = await geocodeLocation(birth_city, birth_country);
+  const { latitude, longitude, timezone, timezoneOffset } = await geocodeLocation(
+    birth_city,
+    birth_country
+  );
 
   if (latitude === undefined || longitude === undefined) {
-    throw new Error('Unable to geocode location');
+    throw new Error("Unable to geocode location");
   }
 
-  const chartData = calculateSwissEphChart(birthdate, birthtime, latitude, longitude);
-  await connection.execute('DELETE FROM user_chart WHERE user_id = ?', [user_id]);
+  const chartData = calculateSwissEphChart(
+    birthdate,
+    birthtime,
+    latitude,
+    longitude,
+    timezoneOffset // Pass timezone offset to chart calculation
+  );
+  await connection.execute("DELETE FROM user_chart WHERE user_id = ?", [
+    user_id,
+  ]);
 
   const chartPointsToInsert: UserChartPoint[] = [];
   const houseCusps = chartData.houses.houses;
 
   Object.entries(chartData.planets).forEach(([planetName, planetData]) => {
-    const housePosition = calculateHousePosition(planetData.longitude, houseCusps);
+    const housePosition = calculateHousePosition(
+      planetData.longitude,
+      houseCusps
+    );
+    
+    console.log(`Debug: Processing planet '${planetName}' with sign '${planetData.sign}' at longitude ${planetData.longitude}`);
+    
     chartPointsToInsert.push({
       user_id,
-      planet_name: planetName,
+      name: planetName,
       longitude: planetData.longitude,
       latitude: latitude,
       sign: planetData.sign,
@@ -61,16 +86,25 @@ export async function calculateAndSaveUserChart(email: string): Promise<boolean>
       degree: planetData.degree,
       minute: planetData.minute,
       second: planetData.second,
-      planet_type: ['northNode'].includes(planetName) ? 'point' : 
-                  ['chiron'].includes(planetName) ? 'asteroid' : 'planet',
+      planet_type: ["northNode"].includes(planetName)
+        ? "point"
+        : ["chiron"].includes(planetName)
+        ? "asteroid"
+        : "planet",
     });
   });
 
-  (['ascendant', 'midheaven'] as const).forEach((point) => {
-    const housePosition = calculateHousePosition(chartData.houses[point].longitude, houseCusps);
+  (["ascendant", "midheaven"] as const).forEach((point) => {
+    const housePosition = calculateHousePosition(
+      chartData.houses[point].longitude,
+      houseCusps
+    );
+    
+    console.log(`Debug: Processing house point '${point}' with sign '${chartData.houses[point].sign}' at longitude ${chartData.houses[point].longitude}`);
+    
     chartPointsToInsert.push({
       user_id,
-      planet_name: point,
+      name: point,
       longitude: chartData.houses[point].longitude,
       latitude: latitude,
       sign: chartData.houses[point].sign,
@@ -78,7 +112,7 @@ export async function calculateAndSaveUserChart(email: string): Promise<boolean>
       degree: chartData.houses[point].degree,
       minute: chartData.houses[point].minute,
       second: chartData.houses[point].second,
-      planet_type: 'point',
+      planet_type: "point",
     });
   });
 
@@ -89,7 +123,7 @@ export async function calculateAndSaveUserChart(email: string): Promise<boolean>
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         chartPoint.user_id,
-        chartPoint.planet_name,
+        chartPoint.name,
         chartPoint.longitude,
         chartPoint.latitude,
         chartPoint.sign,
@@ -108,88 +142,9 @@ export async function calculateAndSaveUserChart(email: string): Promise<boolean>
 /**
  * Get user's chart points as array (optimized for GraphQL)
  */
-export async function getUserChartPoints(email: string): Promise<UserChartPoint[]> {
-  console.log('Debug: Getting chart points for email:', email);
-  
-  const userData = await getUserBirthData(email);
-  if (!userData) {
-    console.log('Debug: No user data found');
-    return [];
-  }
-
-  console.log('Debug: User data found:', {
-    user_id: userData.user_id,
-    email: userData.email,
-    birthdate: userData.birthdate,
-    birthtime: userData.birthtime,
-    birth_city: userData.birth_city,
-    birth_country: userData.birth_country
-  });
-
-  // Check if user has any existing chart data first
-  const [allChartRows]: any[] = await connection.execute(
-    'SELECT COUNT(*) as count FROM user_chart WHERE user_id = ?',
-    [userData.user_id]
-  );
-  
-  console.log('Debug: Total chart records in DB for user:', allChartRows[0].count);
-
-  // If user already has chart data, return it directly
-  if (allChartRows[0].count > 0) {
-    const [rows]: any[] = await connection.execute(
-      'SELECT * FROM user_chart WHERE user_id = ?',
-      [userData.user_id]
-    );
-
-    console.log('Debug: Returning existing chart data, rows found:', rows.length);
-    
-    return rows.map((row: any) => ({
-      name: row.planet_name,
-      longitude: row.longitude,
-      latitude: row.latitude,
-      sign: row.sign,
-      house: row.house,
-      degree: row.degree,
-      minute: row.minute,
-      second: row.second,
-      planet_type: row.planet_type,
-    }));
-  }
-
-  // If no chart data exists, try to calculate it if birth data is available
-  if (userData.birthdate && userData.birthtime && userData.birth_city && userData.birth_country) {
-    console.log('Debug: Birth data available, calculating chart...');
-    try {
-      await calculateAndSaveUserChart(email);
-      
-      // Fetch the newly created chart data
-      const [newRows]: any[] = await connection.execute(
-        'SELECT * FROM user_chart WHERE user_id = ?',
-        [userData.user_id]
-      );
-
-      console.log('Debug: Chart calculated and saved, new rows:', newRows.length);
-      
-      return newRows.map((row: any) => ({
-        name: row.planet_name,
-        longitude: row.longitude,
-        latitude: row.latitude,
-        sign: row.sign,
-        house: row.house,
-        degree: row.degree,
-        minute: row.minute,
-        second: row.second,
-        planet_type: row.planet_type,
-      }));
-    } catch (error) {
-      console.error('Error calculating chart:', error);
-      return [];
-    }
-  } else {
-    console.log('Debug: Missing birth data - birthdate:', !!userData.birthdate, 
-                'birthtime:', !!userData.birthtime, 
-                'birth_city:', !!userData.birth_city, 
-                'birth_country:', !!userData.birth_country);
-    return [];
-  }
+export async function getUserChartPoints(
+  email: string
+): Promise<UserChartPoint[]> {
+  // Use the cached version for performance
+  return getCachedUserChartPoints(email);
 }

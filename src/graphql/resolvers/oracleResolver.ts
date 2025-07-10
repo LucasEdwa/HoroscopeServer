@@ -1,28 +1,38 @@
-import { OracleService, OracleQuestion } from '../../services/oracleService';
+import * as OracleService from '../../services/oracleService';
+import { OracleQuestion, AskOracleInput, FutureTimeframe } from '../../interfaces/oracleInterface';
 import { GraphQLError } from 'graphql';
 import { askComprehensiveFuture } from '../../utils/ChatOi';
+import { Request } from 'express';
+import { requireAuth, requireOwnership } from '../../utils/authUtils';
 
-interface AskOracleInput {
-  email: string;
-  question: string;
-  chart?: any; // Optional chart data for better AI responses
-}
-
-interface FutureTimeframe {
-  email: string;
-  timeframe: 'week' | 'month' | 'year';
-}
+// Import validation functions individually to avoid module resolution issues
+import { 
+  validateEmail, 
+  validateOracleQuestion,
+  ErrorMessages 
+} from '../../utils/validationUtils';
 
 export const oracleResolvers = {
   Query: {
-    getOracleHistory: async ( args: any) => {
+    getOracleHistory: async (args: any, context: { req: Request }) => {
       try {
-        console.log('Received args for getOracleHistory:', args); // Debug log
+        const authenticatedUser = requireAuth(context);
         
-        const { email } = args;
+        // In Express GraphQL with rootValue, args come directly as the first parameter
+        const email = args.email;
+        
         if (!email || !email.trim()) {
           throw new GraphQLError('Email is required');
         }
+        
+        // Validate email format
+        const emailValidation = validateEmail(email);
+        if (!emailValidation.isValid) {
+          throw new GraphQLError(emailValidation.message);
+        }
+        
+        // Ensure user can only access their own oracle history
+        requireOwnership(authenticatedUser, email);
         
         return await OracleService.getOracleQuestionsByEmail(email);
       } catch (error) {
@@ -32,8 +42,13 @@ export const oracleResolvers = {
       }
     },
     
-    getOracleQuestion: async (_: any, { id }: { id: number }) => {
+    getOracleQuestion: async (args: any, context: { req: Request }) => {
       try {
+        const authenticatedUser = requireAuth(context);
+        console.log('Received args for getOracleQuestion:', args);
+        
+        const id = args.id;
+        
         if (!id) {
           throw new GraphQLError('Question ID is required');
         }
@@ -43,6 +58,9 @@ export const oracleResolvers = {
           throw new GraphQLError('Oracle question not found');
         }
         
+        // Ensure user can only access their own oracle questions
+        requireOwnership(authenticatedUser, question.email);
+        
         return question;
       } catch (error) {
         console.error('Error getting oracle question:', error);
@@ -51,17 +69,26 @@ export const oracleResolvers = {
       }
     },
 
-    getComprehensiveFuture: async (_: any, { email, timeframe }: FutureTimeframe) => {
+    getComprehensiveFuture: async (args: any, context: { req: Request }) => {
       try {
+        const authenticatedUser = requireAuth(context);
+        console.log('Received args for getComprehensiveFuture:', args);
+        
+        const email = args.email;
+        const timeframe = args.timeframe;
+        
         if (!email || !email.trim()) {
           throw new GraphQLError('Email is required');
         }
 
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-          throw new GraphQLError('Invalid email format');
+        // Validate email format using validation utilities
+        const emailValidation = validateEmail(email);
+        if (!emailValidation.isValid) {
+          throw new GraphQLError(emailValidation.message);
         }
+
+        // Ensure user can only get their own future predictions
+        requireOwnership(authenticatedUser, email);
 
         const prediction = await askComprehensiveFuture(email, timeframe || 'month');
         
@@ -80,42 +107,40 @@ export const oracleResolvers = {
   },
   
   Mutation: {
-    submitOracleQuestion: async (args: any) => {
+    submitOracleQuestion: async (args: any, context: { req: Request }) => {
       try {
-        console.log('Received args:', args); // Debug log
+        const authenticatedUser = requireAuth(context);
+        console.log('Received args for submitOracleQuestion:', args);
         
-        const { input } = args;
+        const input = args.input;
+        
         if (!input) {
           throw new GraphQLError('Input is required');
         }
         
-        // Input validation
-        if (!input.email || !input.email.trim()) {
-          throw new GraphQLError('Email is required');
+        // Validate email using validation utilities
+        const emailValidation = validateEmail(input.email);
+        if (!emailValidation.isValid) {
+          throw new GraphQLError(emailValidation.message);
         }
         
-        if (!input.question || !input.question.trim()) {
-          throw new GraphQLError('Question is required');
+        // Ensure user can only submit questions for their own email
+        requireOwnership(authenticatedUser, input.email);
+        
+        // Validate question using validation utilities
+        const questionValidation = validateOracleQuestion(input.question);
+        if (!questionValidation.isValid) {
+          throw new GraphQLError(questionValidation.message);
         }
         
-        if (input.question.length > 500) {
-          throw new GraphQLError('Question too long (max 500 characters)');
-        }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(input.email)) {
-          throw new GraphQLError('Invalid email format');
-        }
-        
-        // Get AI response
+        // Get AI response using the Oracle service
         const result = await OracleService.askOracleQuestion({
           email: input.email,
           question: input.question.trim(),
           chart: input.chart
         });
         
-        // Save to database
+        // Save to database using the Oracle service
         const savedQuestion = await OracleService.saveOracleQuestion({
           email: input.email,
           question: result.question,
@@ -126,15 +151,29 @@ export const oracleResolvers = {
       } catch (error) {
         console.error('Error submitting oracle question:', error);
         if (error instanceof GraphQLError) throw error;
-        throw new GraphQLError('Failed to submit oracle question');
+        throw new GraphQLError(ErrorMessages.SERVER_ERROR);
       }
     },
     
-    deleteOracleQuestion: async (_: any, { id }: { id: number }) => {
+    deleteOracleQuestion: async (args: any, context: { req: Request }) => {
       try {
+        const authenticatedUser = requireAuth(context);
+        console.log('Received args for deleteOracleQuestion:', args);
+        
+        const id = args.id;
+        
         if (!id) {
           throw new GraphQLError('Question ID is required');
         }
+        
+        // First get the question to check ownership
+        const question = await OracleService.getOracleQuestion({ id }) as OracleQuestion | null;
+        if (!question) {
+          throw new GraphQLError('Oracle question not found');
+        }
+        
+        // Ensure user can only delete their own questions
+        requireOwnership(authenticatedUser, question.email);
         
         return await OracleService.deleteOracleQuestion(id);
       } catch (error) {

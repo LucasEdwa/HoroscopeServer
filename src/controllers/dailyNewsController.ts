@@ -50,4 +50,3 @@
 //     res.status(500).json({ error: error.message || "Failed to generate daily astro advice" });
 //   }
 // };
-

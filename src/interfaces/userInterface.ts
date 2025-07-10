@@ -1,4 +1,5 @@
 export interface ChartPoint {
+  user_id: number;
   name: string;
   longitude: number;
   latitude: number;
@@ -10,6 +11,8 @@ export interface ChartPoint {
   planet_type: 'planet' | 'point' | 'asteroid';
   distance?: number | null; // Optional field
 }
+
+
 
 export interface User {
   id: string;
