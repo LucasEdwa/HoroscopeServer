@@ -14,6 +14,8 @@ import playground from 'graphql-playground-middleware-express';
 import { oracleTypeDefs } from './graphql/schemas/oracleSchema';
 import { userResolvers } from './graphql/resolvers/userResolver';
 import { oracleResolvers } from './graphql/resolvers/oracleResolver';
+import { weeklyHoroscopeResolvers } from './graphql/resolvers/weeklyResolver';
+import { weeklyHoroscopeTypeDefs } from './graphql/schemas/weeklySchema';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -32,6 +34,7 @@ app.use(express.json());
 const typeDefs = `
   ${userTypeDefs}
   ${oracleTypeDefs}
+  ${weeklyHoroscopeTypeDefs}
   
   extend type Query {
     getOracleHistory(email: String!): [OracleQuestion!]!
@@ -65,6 +68,10 @@ const createRootValue = (context: any) => {
     // Oracle mutations
     submitOracleQuestion: (args: any) => oracleResolvers.Mutation?.submitOracleQuestion(args, context),
     deleteOracleQuestion: (args: any) => oracleResolvers.Mutation?.deleteOracleQuestion(args, context),
+
+    // Weekly horoscope queries
+    weeklyHoroscope: (args: any) => weeklyHoroscopeResolvers.Query?.weeklyHoroscope(undefined, args, context),
+    
   };
 };
 
@@ -72,8 +79,6 @@ const createRootValue = (context: any) => {
 app.use(
   '/graphql',
   graphqlHTTP((request, response) => {
-    console.log('Debug: GraphQL request headers:', request.headers);
-    console.log('Debug: Authorization header:', request.headers.authorization);
     
     const context = { req: request };
     return {

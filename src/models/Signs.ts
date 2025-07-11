@@ -7,8 +7,8 @@ export const signsSqlStatements = [
     name VARCHAR(50) NOT NULL UNIQUE,
     description TEXT DEFAULT NULL,
     PRIMARY KEY (id)
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`,
-]
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`
+];
 
 export const zodiacSigns = [
   { name: 'Aries', description: 'Aries is the spark that ignites the zodiac, a bold pioneer charging forward like a ram breaking through barriers. Their energy is raw, direct, and unstoppable, inspiring others to take action and embrace new beginnings.' },
@@ -30,9 +30,7 @@ export class SignsTables {
     await connection.query(signsSqlStatements[0]);
   }
 
-  static async createUserChartPointsTable() {
-    await connection.query(signsSqlStatements[1]);
-  }
+  // Removed createUserChartPointsTable, use user_chart from UserDatabase instead
 }
 
 export class SignsDatabase {
@@ -45,7 +43,7 @@ export class SignsDatabase {
   async setupSigns() {
     try {
       await SignsTables.createSignsTable();
-      await SignsTables.createUserChartPointsTable();
+      // user_chart table is managed by UserDatabase
     } catch (error: any) {
       Logger.error(error);
       console.error("Error setting up signs tables:", error.message || error);
@@ -79,7 +77,6 @@ export class SignsDatabase {
 
   async dropAllSignsRelatedTables() {
     try {
-      await this.db.query('DROP TABLE IF EXISTS user_chart_points');
       await this.db.query('DROP TABLE IF EXISTS signs');
       console.log("All signs-related tables dropped.");
     } catch (error: any) {

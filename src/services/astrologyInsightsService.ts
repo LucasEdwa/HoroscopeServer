@@ -1,5 +1,5 @@
 import { getAllPlanets, dateToJulian } from '../hooks/swissephHook';
-import { getAspectName, getMoonPhase } from '../utils/chartFormatters';
+import { getAspectName, getMoonPhase } from '../utils/formatters/chartFormatters';
 
 export async function getCurrentPlanetsAdvanced(): Promise<string> {
   try {

@@ -1,5 +1,5 @@
 import { ChartPoint as UserChartPoint } from "../interfaces/userInterface";
-import { calculateHousePosition, getPlanetType } from "../utils/astrologyCalculations";
+import { calculateHousePosition, getPlanetType } from "../utils/astrology/astrologyCalculations";
 
 /**
  * Process planets data into UserChartPoint format

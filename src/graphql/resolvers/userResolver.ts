@@ -5,7 +5,7 @@ import { calculateAndSaveUserChart } from '../../services/swissephService';
 import { User } from '../../interfaces/userInterface';
 import jwt from 'jsonwebtoken';
 import { Request } from 'express';
-import { requireAuth, requireOwnership } from '../../utils/authUtils';
+import { requireAuth, requireOwnership } from '../../utils/auth/authUtils';
 
 
 
@@ -23,10 +23,8 @@ export const userResolvers = {
   Query: {
     // Get current user profile (authenticated)
     async me(args: any, context: { req: Request }): Promise<User | null> {
-      console.log('Debug: Me query called');
       
       const authenticatedUser = requireAuth(context);
-      console.log('Debug: Authenticated user:', authenticatedUser);
       
       const user = await getUserForQuery(authenticatedUser.email);
       
@@ -72,7 +70,6 @@ export const userResolvers = {
       if (user && user.chartPoints) {
         user.chartPoints = user.chartPoints.map(point => {
           const distance = calculatePlanetDistance(point.name);
-          console.log(`Debug: Planet '${point.name}' -> distance: ${distance}`);
           
           const mappedPoint = {
             user_id: point.user_id,
@@ -162,10 +159,8 @@ export const userResolvers = {
       password: string;
     }) {
       try {
-        console.log('Debug: Signin attempt for email:', email);
 
         const user = await getUserByEmail(email);
-        console.log('Debug: Fetched user for signin:', user);
         if (!user) {
           console.warn('Debug: User not found for email:', email);
           return {
@@ -176,13 +171,11 @@ export const userResolvers = {
           };
         }
 
-        console.log('Debug: Stored password hash:', user.password);
 
         let isValidPassword = false;
         if (bcrypt && user.password) {
           isValidPassword = await bcrypt.compare(password, user.password);
         }
-        console.log('Debug: Password comparison result:', isValidPassword);
 
         if (!isValidPassword) {
           console.warn('Debug: Invalid password for email:', email);
@@ -202,7 +195,6 @@ export const userResolvers = {
           process.env.JWT_SECRET,
           { expiresIn: '1h' }
         );
-        console.log('Debug: Generated token:', token);
 
         return {
           success: true,
@@ -243,7 +235,6 @@ function calculatePlanetDistance(planetName: string): number | null {
   };
 
   const key = planetName.toLowerCase();
-  console.log(`Debug: Looking up '${key}' in distances object. Available keys:`, Object.keys(distances));
   
   return distances[key] !== undefined ? distances[key] : null;
 }

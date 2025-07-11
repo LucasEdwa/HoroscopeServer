@@ -24,7 +24,6 @@ export class OracleQuestionsTable {
         'DESCRIBE oracle_questions'
       );
       
-      console.log('Oracle questions table structure:', rows);
     } catch (error) {
       console.error('Error setting up oracle questions table:', error);
       throw error;

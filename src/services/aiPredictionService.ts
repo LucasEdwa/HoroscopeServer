@@ -1,5 +1,5 @@
 import { askOpenAI } from './openaiService';
-import { buildUserContext } from '../utils/ChatOi';
+import { buildUserContext } from '../utils/ai/ChatOi';
 import { getDailyAstrologyInsights } from './astrologyInsightsService';
 
 export async function askDailyAstroAdvice(chart: any, email?: string): Promise<string> {

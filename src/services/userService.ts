@@ -17,7 +17,6 @@ export async function getUserBirthData(email: string): Promise<UserBirthData | n
   }
 
   const userData = userRows[0];
-  console.log('User birth data:', userData);
   return userData;
 }
 
@@ -47,7 +46,6 @@ export async function getUserForQuery(email: string): Promise<User | null> {
     [userData.user_id]
   );
 
-  console.log('Debug: Fetched chart points:', chartRows);
 
   const chartPoints: ChartPoint[] = chartRows.map((row: any) => ({
     name: row.planet_name,
@@ -74,13 +72,11 @@ export async function getUserForQuery(email: string): Promise<User | null> {
 }
 
 export const getUserByEmail = async (email: string) => {
-  console.log('Debug: Searching for email in database (case-insensitive):', email);
   const [rows]: any = await connection.execute(
     'SELECT * FROM users WHERE LOWER(email) = ? LIMIT 1',
     [email.toLowerCase()]
   );
   const user = Array.isArray(rows) && rows.length > 0 ? rows[0] : null;
-  console.log('Debug: User found:', user);
   return user;
 };
 
@@ -95,7 +91,6 @@ export async function createUser(
 ) {
   // Hash password
   const hashedPassword = await bcrypt.hash(password, 10);
-  console.log('Hashed password during user creation:', hashedPassword); // Log the hashed password
 
   // Insert user into the database
   const [userResult]: any = await connection.execute(

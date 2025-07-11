@@ -1,16 +1,16 @@
 import * as OracleService from '../../services/oracleService';
 import { OracleQuestion, AskOracleInput, FutureTimeframe } from '../../interfaces/oracleInterface';
 import { GraphQLError } from 'graphql';
-import { askComprehensiveFuture } from '../../utils/ChatOi';
+import { askComprehensiveFuture } from '../../utils/ai/ChatOi';
 import { Request } from 'express';
-import { requireAuth, requireOwnership } from '../../utils/authUtils';
+import { requireAuth, requireOwnership } from '../../utils/auth/authUtils';
 
 // Import validation functions individually to avoid module resolution issues
 import { 
   validateEmail, 
   validateOracleQuestion,
   ErrorMessages 
-} from '../../utils/validationUtils';
+} from '../../utils/validation/validationUtils';
 
 export const oracleResolvers = {
   Query: {
@@ -45,7 +45,6 @@ export const oracleResolvers = {
     getOracleQuestion: async (args: any, context: { req: Request }) => {
       try {
         const authenticatedUser = requireAuth(context);
-        console.log('Received args for getOracleQuestion:', args);
         
         const id = args.id;
         
@@ -110,7 +109,6 @@ export const oracleResolvers = {
     submitOracleQuestion: async (args: any, context: { req: Request }) => {
       try {
         const authenticatedUser = requireAuth(context);
-        console.log('Received args for submitOracleQuestion:', args);
         
         const input = args.input;
         
@@ -158,7 +156,6 @@ export const oracleResolvers = {
     deleteOracleQuestion: async (args: any, context: { req: Request }) => {
       try {
         const authenticatedUser = requireAuth(context);
-        console.log('Received args for deleteOracleQuestion:', args);
         
         const id = args.id;
         

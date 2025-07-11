@@ -3,7 +3,7 @@ import { getUserBirthData } from "./userService";
 import { connection } from "../database/connection";
 import { geocodeLocation } from "./geocodingService";
 import { ChartPoint as UserChartPoint } from "../interfaces/userInterface";
-import { getCachedUserChartPoints } from "../utils/performanceOptimizations";
+import { getCachedUserChartPoints } from "../utils/performance/performanceOptimizations";
 
 /**
  * Calculate which house a planet is in based on longitude and house cusps

@@ -1,4 +1,4 @@
-import { ChartPoint } from '../interfaces/aiInterface';
+import { ChartPoint } from '../../interfaces/aiInterface';
 
 export function formatChartForAI(chartPoints: ChartPoint[]): string {
   if (!chartPoints || chartPoints.length === 0) {

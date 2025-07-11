@@ -2436,3 +2436,1351 @@ src/graphql/resolvers/oracleResolver.ts(38,75): error TS2304: Cannot find name '
 [2025-07-06 00:52:25] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
 [2025-07-06 00:52:33] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
 [2025-07-06 00:56:24] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 19:55:51] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(55,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(72,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(91,20): error TS2339: Property 'user_id' does not exist on type 'ChartPoint'.
+src/services/swissephService.ts(92,20): error TS2339: Property 'planet_name' does not exist on type 'ChartPoint'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(55,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(72,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(91,20): error TS2339: Property 'user_id' does not exist on type 'ChartPoint'.
+src/services/swissephService.ts(92,20): error TS2339: Property 'planet_name' does not exist on type 'ChartPoint'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 19:57:51] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(55,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(72,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(91,20): error TS2339: Property 'user_id' does not exist on type 'ChartPoint'.
+src/services/swissephService.ts(92,20): error TS2339: Property 'planet_name' does not exist on type 'ChartPoint'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(55,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(72,7): error TS2353: Object literal may only specify known properties, and 'user_id' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(91,20): error TS2339: Property 'user_id' does not exist on type 'ChartPoint'.
+src/services/swissephService.ts(92,20): error TS2339: Property 'planet_name' does not exist on type 'ChartPoint'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 19:57:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(73,7): error TS2353: Object literal may only specify known properties, and 'planet_name' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(92,20): error TS2339: Property 'planet_name' does not exist on type 'ChartPoint'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(73,7): error TS2353: Object literal may only specify known properties, and 'planet_name' does not exist in type 'ChartPoint'.
+src/services/swissephService.ts(92,20): error TS2339: Property 'planet_name' does not exist on type 'ChartPoint'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 19:58:27] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(1,10): error TS2305: Module '"../../services/oracleService"' has no exported member 'OracleService'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(1,10): error TS2305: Module '"../../services/oracleService"' has no exported member 'OracleService'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:01:36] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:01:39] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:02:38] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(27,36): error TS2339: Property 'getOracleQuestionsByEmail' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(41,46): error TS2339: Property 'getOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(112,44): error TS2339: Property 'askOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(119,51): error TS2339: Property 'saveOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(139,36): error TS2339: Property 'deleteOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(27,36): error TS2339: Property 'getOracleQuestionsByEmail' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(41,46): error TS2339: Property 'getOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(112,44): error TS2339: Property 'askOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(119,51): error TS2339: Property 'saveOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+src/graphql/resolvers/oracleResolver.ts(139,36): error TS2339: Property 'deleteOracleQuestion' does not exist on type 'typeof import("/Users/lucaseduardo/HoroscopeServer/src/interfaces/oracleInterface")'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:06:02] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:06:03] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:06:43] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(2,26): error TS2440: Import declaration conflicts with local declaration of 'AskOracleInput'.
+src/graphql/resolvers/oracleResolver.ts(2,41): error TS2440: Import declaration conflicts with local declaration of 'FutureTimeframe'.
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(2,26): error TS2440: Import declaration conflicts with local declaration of 'AskOracleInput'.
+src/graphql/resolvers/oracleResolver.ts(2,41): error TS2440: Import declaration conflicts with local declaration of 'FutureTimeframe'.
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:06:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:09:02] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(12,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(12,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(74,7): error TS2304: Cannot find name 'user_id'.
+src/services/swissephService.ts(74,7): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(75,13): error TS2304: Cannot find name 'planetName'.
+src/services/swissephService.ts(75,13): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(76,7): error TS2304: Cannot find name 'longitude'.
+src/services/swissephService.ts(76,18): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(77,7): error TS2304: Cannot find name 'latitude'.
+src/services/swissephService.ts(77,17): error TS2304: Cannot find name 'latitude'.
+src/services/swissephService.ts(77,17): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(78,7): error TS2304: Cannot find name 'sign'.
+src/services/swissephService.ts(78,13): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(79,7): error TS2304: Cannot find name 'house'.
+src/services/swissephService.ts(79,14): error TS2304: Cannot find name 'housePosition'.
+src/services/swissephService.ts(79,14): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(80,7): error TS2304: Cannot find name 'degree'.
+src/services/swissephService.ts(80,15): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(81,7): error TS2304: Cannot find name 'minute'.
+src/services/swissephService.ts(81,15): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(82,7): error TS2304: Cannot find name 'second'.
+src/services/swissephService.ts(82,15): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(83,7): error TS2304: Cannot find name 'planet_type'.
+src/services/swissephService.ts(83,20): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(83,43): error TS2304: Cannot find name 'planetName'.
+src/services/swissephService.ts(85,31): error TS2304: Cannot find name 'planetName'.
+src/services/swissephService.ts(92,27): error TS2304: Cannot find name 'calculateHousePosition'.
+src/services/swissephService.ts(93,7): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(94,7): error TS2304: Cannot find name 'houseCusps'.
+src/services/swissephService.ts(96,5): error TS2304: Cannot find name 'chartPointsToInsert'.
+src/services/swissephService.ts(97,7): error TS18004: No value exists in scope for the shorthand property 'user_id'. Either declare one or provide an initializer.
+src/services/swissephService.ts(99,18): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(100,17): error TS2304: Cannot find name 'latitude'.
+src/services/swissephService.ts(101,13): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(103,15): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(104,15): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(105,15): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(110,28): error TS2304: Cannot find name 'chartPointsToInsert'.
+src/services/swissephService.ts(111,11): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(136,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(136,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(157,39): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(169,33): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(204,38): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(75,11): error TS1005: ';' expected.
+src/services/swissephService.ts(76,16): error TS1005: ';' expected.
+src/services/swissephService.ts(77,15): error TS1005: ';' expected.
+src/services/swissephService.ts(78,11): error TS1005: ';' expected.
+src/services/swissephService.ts(79,12): error TS1005: ';' expected.
+src/services/swissephService.ts(80,13): error TS1005: ';' expected.
+src/services/swissephService.ts(81,13): error TS1005: ';' expected.
+src/services/swissephService.ts(82,13): error TS1005: ';' expected.
+src/services/swissephService.ts(83,18): error TS1005: ';' expected.
+src/services/swissephService.ts(88,5): error TS1109: Expression expected.
+src/services/swissephService.ts(88,6): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(89,3): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(89,4): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(131,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(12,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(12,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(74,7): error TS2304: Cannot find name 'user_id'.
+src/services/swissephService.ts(74,7): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(75,13): error TS2304: Cannot find name 'planetName'.
+src/services/swissephService.ts(75,13): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(76,7): error TS2304: Cannot find name 'longitude'.
+src/services/swissephService.ts(76,18): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(77,7): error TS2304: Cannot find name 'latitude'.
+src/services/swissephService.ts(77,17): error TS2304: Cannot find name 'latitude'.
+src/services/swissephService.ts(77,17): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(78,7): error TS2304: Cannot find name 'sign'.
+src/services/swissephService.ts(78,13): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(79,7): error TS2304: Cannot find name 'house'.
+src/services/swissephService.ts(79,14): error TS2304: Cannot find name 'housePosition'.
+src/services/swissephService.ts(79,14): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(80,7): error TS2304: Cannot find name 'degree'.
+src/services/swissephService.ts(80,15): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(81,7): error TS2304: Cannot find name 'minute'.
+src/services/swissephService.ts(81,15): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(82,7): error TS2304: Cannot find name 'second'.
+src/services/swissephService.ts(82,15): error TS2304: Cannot find name 'planetData'.
+src/services/swissephService.ts(83,7): error TS2304: Cannot find name 'planet_type'.
+src/services/swissephService.ts(83,20): error TS2695: Left side of comma operator is unused and has no side effects.
+src/services/swissephService.ts(83,43): error TS2304: Cannot find name 'planetName'.
+src/services/swissephService.ts(85,31): error TS2304: Cannot find name 'planetName'.
+src/services/swissephService.ts(92,27): error TS2304: Cannot find name 'calculateHousePosition'.
+src/services/swissephService.ts(93,7): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(94,7): error TS2304: Cannot find name 'houseCusps'.
+src/services/swissephService.ts(96,5): error TS2304: Cannot find name 'chartPointsToInsert'.
+src/services/swissephService.ts(97,7): error TS18004: No value exists in scope for the shorthand property 'user_id'. Either declare one or provide an initializer.
+src/services/swissephService.ts(99,18): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(100,17): error TS2304: Cannot find name 'latitude'.
+src/services/swissephService.ts(101,13): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(103,15): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(104,15): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(105,15): error TS2304: Cannot find name 'chartData'.
+src/services/swissephService.ts(110,28): error TS2304: Cannot find name 'chartPointsToInsert'.
+src/services/swissephService.ts(111,11): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(136,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(136,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(157,39): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(169,33): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(204,38): error TS2304: Cannot find name 'connection'.
+src/services/swissephService.ts(75,11): error TS1005: ';' expected.
+src/services/swissephService.ts(76,16): error TS1005: ';' expected.
+src/services/swissephService.ts(77,15): error TS1005: ';' expected.
+src/services/swissephService.ts(78,11): error TS1005: ';' expected.
+src/services/swissephService.ts(79,12): error TS1005: ';' expected.
+src/services/swissephService.ts(80,13): error TS1005: ';' expected.
+src/services/swissephService.ts(81,13): error TS1005: ';' expected.
+src/services/swissephService.ts(82,13): error TS1005: ';' expected.
+src/services/swissephService.ts(83,18): error TS1005: ';' expected.
+src/services/swissephService.ts(88,5): error TS1109: Expression expected.
+src/services/swissephService.ts(88,6): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(89,3): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(89,4): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(131,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:09:15] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:10:30] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/oracleResolver.ts(9,8): error TS2307: Cannot find module '../../utils/validationUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/oracleResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:12:57] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:13:02] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/utils/validationUtils.ts(6,14): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(14,17): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(37,17): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(52,17): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(74,17): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(103,17): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(126,14): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(135,14): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(147,17): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(181,17): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(214,17): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(235,17): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(250,17): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(307,17): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(401,3): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(401,3): error TS2484: Export declaration conflicts with exported declaration of 'validateEmail'.
+src/utils/validationUtils.ts(402,3): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(402,3): error TS2484: Export declaration conflicts with exported declaration of 'validatePassword'.
+src/utils/validationUtils.ts(403,3): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(403,3): error TS2484: Export declaration conflicts with exported declaration of 'validateOracleQuestion'.
+src/utils/validationUtils.ts(404,3): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(404,3): error TS2484: Export declaration conflicts with exported declaration of 'validateBirthData'.
+src/utils/validationUtils.ts(405,3): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(405,3): error TS2484: Export declaration conflicts with exported declaration of 'handleDatabaseError'.
+src/utils/validationUtils.ts(406,3): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(406,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(407,3): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(407,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthInstructions'.
+src/utils/validationUtils.ts(408,3): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(408,3): error TS2484: Export declaration conflicts with exported declaration of 'debugGraphQLContext'.
+src/utils/validationUtils.ts(409,3): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(409,3): error TS2484: Export declaration conflicts with exported declaration of 'formatTokenResponse'.
+src/utils/validationUtils.ts(410,3): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(410,3): error TS2484: Export declaration conflicts with exported declaration of 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(411,3): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(411,3): error TS2484: Export declaration conflicts with exported declaration of 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(412,3): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(412,3): error TS2484: Export declaration conflicts with exported declaration of 'SuccessMessages'.
+src/utils/validationUtils.ts(413,3): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(413,3): error TS2484: Export declaration conflicts with exported declaration of 'ErrorMessages'.
+src/utils/validationUtils.ts(414,3): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(414,3): error TS2484: Export declaration conflicts with exported declaration of 'ValidationError'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validationUtils.ts(6,14): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(14,17): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(37,17): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(52,17): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(74,17): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(103,17): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(126,14): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(135,14): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(147,17): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(181,17): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(214,17): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(235,17): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(250,17): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(307,17): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(401,3): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(401,3): error TS2484: Export declaration conflicts with exported declaration of 'validateEmail'.
+src/utils/validationUtils.ts(402,3): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(402,3): error TS2484: Export declaration conflicts with exported declaration of 'validatePassword'.
+src/utils/validationUtils.ts(403,3): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(403,3): error TS2484: Export declaration conflicts with exported declaration of 'validateOracleQuestion'.
+src/utils/validationUtils.ts(404,3): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(404,3): error TS2484: Export declaration conflicts with exported declaration of 'validateBirthData'.
+src/utils/validationUtils.ts(405,3): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(405,3): error TS2484: Export declaration conflicts with exported declaration of 'handleDatabaseError'.
+src/utils/validationUtils.ts(406,3): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(406,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(407,3): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(407,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthInstructions'.
+src/utils/validationUtils.ts(408,3): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(408,3): error TS2484: Export declaration conflicts with exported declaration of 'debugGraphQLContext'.
+src/utils/validationUtils.ts(409,3): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(409,3): error TS2484: Export declaration conflicts with exported declaration of 'formatTokenResponse'.
+src/utils/validationUtils.ts(410,3): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(410,3): error TS2484: Export declaration conflicts with exported declaration of 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(411,3): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(411,3): error TS2484: Export declaration conflicts with exported declaration of 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(412,3): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(412,3): error TS2484: Export declaration conflicts with exported declaration of 'SuccessMessages'.
+src/utils/validationUtils.ts(413,3): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(413,3): error TS2484: Export declaration conflicts with exported declaration of 'ErrorMessages'.
+src/utils/validationUtils.ts(414,3): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(414,3): error TS2484: Export declaration conflicts with exported declaration of 'ValidationError'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/utils/validationUtils.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:13:02] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/utils/validationUtils.ts(6,14): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(14,17): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(37,17): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(52,17): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(74,17): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(103,17): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(126,14): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(135,14): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(147,17): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(181,17): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(214,17): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(235,17): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(250,17): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(307,17): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(401,3): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(401,3): error TS2484: Export declaration conflicts with exported declaration of 'validateEmail'.
+src/utils/validationUtils.ts(402,3): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(402,3): error TS2484: Export declaration conflicts with exported declaration of 'validatePassword'.
+src/utils/validationUtils.ts(403,3): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(403,3): error TS2484: Export declaration conflicts with exported declaration of 'validateOracleQuestion'.
+src/utils/validationUtils.ts(404,3): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(404,3): error TS2484: Export declaration conflicts with exported declaration of 'validateBirthData'.
+src/utils/validationUtils.ts(405,3): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(405,3): error TS2484: Export declaration conflicts with exported declaration of 'handleDatabaseError'.
+src/utils/validationUtils.ts(406,3): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(406,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(407,3): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(407,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthInstructions'.
+src/utils/validationUtils.ts(408,3): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(408,3): error TS2484: Export declaration conflicts with exported declaration of 'debugGraphQLContext'.
+src/utils/validationUtils.ts(409,3): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(409,3): error TS2484: Export declaration conflicts with exported declaration of 'formatTokenResponse'.
+src/utils/validationUtils.ts(410,3): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(410,3): error TS2484: Export declaration conflicts with exported declaration of 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(411,3): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(411,3): error TS2484: Export declaration conflicts with exported declaration of 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(412,3): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(412,3): error TS2484: Export declaration conflicts with exported declaration of 'SuccessMessages'.
+src/utils/validationUtils.ts(413,3): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(413,3): error TS2484: Export declaration conflicts with exported declaration of 'ErrorMessages'.
+src/utils/validationUtils.ts(414,3): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(414,3): error TS2484: Export declaration conflicts with exported declaration of 'ValidationError'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validationUtils.ts(6,14): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(14,17): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(37,17): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(52,17): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(74,17): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(103,17): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(126,14): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(135,14): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(147,17): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(181,17): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(214,17): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(235,17): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(250,17): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(307,17): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(401,3): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(401,3): error TS2484: Export declaration conflicts with exported declaration of 'validateEmail'.
+src/utils/validationUtils.ts(402,3): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(402,3): error TS2484: Export declaration conflicts with exported declaration of 'validatePassword'.
+src/utils/validationUtils.ts(403,3): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(403,3): error TS2484: Export declaration conflicts with exported declaration of 'validateOracleQuestion'.
+src/utils/validationUtils.ts(404,3): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(404,3): error TS2484: Export declaration conflicts with exported declaration of 'validateBirthData'.
+src/utils/validationUtils.ts(405,3): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(405,3): error TS2484: Export declaration conflicts with exported declaration of 'handleDatabaseError'.
+src/utils/validationUtils.ts(406,3): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(406,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(407,3): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(407,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthInstructions'.
+src/utils/validationUtils.ts(408,3): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(408,3): error TS2484: Export declaration conflicts with exported declaration of 'debugGraphQLContext'.
+src/utils/validationUtils.ts(409,3): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(409,3): error TS2484: Export declaration conflicts with exported declaration of 'formatTokenResponse'.
+src/utils/validationUtils.ts(410,3): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(410,3): error TS2484: Export declaration conflicts with exported declaration of 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(411,3): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(411,3): error TS2484: Export declaration conflicts with exported declaration of 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(412,3): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(412,3): error TS2484: Export declaration conflicts with exported declaration of 'SuccessMessages'.
+src/utils/validationUtils.ts(413,3): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(413,3): error TS2484: Export declaration conflicts with exported declaration of 'ErrorMessages'.
+src/utils/validationUtils.ts(414,3): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(414,3): error TS2484: Export declaration conflicts with exported declaration of 'ValidationError'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/utils/validationUtils.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:13:07] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/utils/validationUtils.ts(6,14): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(14,17): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(37,17): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(52,17): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(74,17): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(103,17): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(126,14): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(135,14): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(147,17): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(181,17): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(214,17): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(235,17): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(250,17): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(307,17): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(401,3): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(401,3): error TS2484: Export declaration conflicts with exported declaration of 'validateEmail'.
+src/utils/validationUtils.ts(402,3): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(402,3): error TS2484: Export declaration conflicts with exported declaration of 'validatePassword'.
+src/utils/validationUtils.ts(403,3): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(403,3): error TS2484: Export declaration conflicts with exported declaration of 'validateOracleQuestion'.
+src/utils/validationUtils.ts(404,3): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(404,3): error TS2484: Export declaration conflicts with exported declaration of 'validateBirthData'.
+src/utils/validationUtils.ts(405,3): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(405,3): error TS2484: Export declaration conflicts with exported declaration of 'handleDatabaseError'.
+src/utils/validationUtils.ts(406,3): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(406,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(407,3): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(407,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthInstructions'.
+src/utils/validationUtils.ts(408,3): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(408,3): error TS2484: Export declaration conflicts with exported declaration of 'debugGraphQLContext'.
+src/utils/validationUtils.ts(409,3): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(409,3): error TS2484: Export declaration conflicts with exported declaration of 'formatTokenResponse'.
+src/utils/validationUtils.ts(410,3): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(410,3): error TS2484: Export declaration conflicts with exported declaration of 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(411,3): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(411,3): error TS2484: Export declaration conflicts with exported declaration of 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(412,3): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(412,3): error TS2484: Export declaration conflicts with exported declaration of 'SuccessMessages'.
+src/utils/validationUtils.ts(413,3): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(413,3): error TS2484: Export declaration conflicts with exported declaration of 'ErrorMessages'.
+src/utils/validationUtils.ts(414,3): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(414,3): error TS2484: Export declaration conflicts with exported declaration of 'ValidationError'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validationUtils.ts(6,14): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(14,17): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(37,17): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(52,17): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(74,17): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(103,17): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(126,14): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(135,14): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(147,17): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(181,17): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(214,17): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(235,17): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(250,17): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(307,17): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(401,3): error TS2323: Cannot redeclare exported variable 'validateEmail'.
+src/utils/validationUtils.ts(401,3): error TS2484: Export declaration conflicts with exported declaration of 'validateEmail'.
+src/utils/validationUtils.ts(402,3): error TS2323: Cannot redeclare exported variable 'validatePassword'.
+src/utils/validationUtils.ts(402,3): error TS2484: Export declaration conflicts with exported declaration of 'validatePassword'.
+src/utils/validationUtils.ts(403,3): error TS2323: Cannot redeclare exported variable 'validateOracleQuestion'.
+src/utils/validationUtils.ts(403,3): error TS2484: Export declaration conflicts with exported declaration of 'validateOracleQuestion'.
+src/utils/validationUtils.ts(404,3): error TS2323: Cannot redeclare exported variable 'validateBirthData'.
+src/utils/validationUtils.ts(404,3): error TS2484: Export declaration conflicts with exported declaration of 'validateBirthData'.
+src/utils/validationUtils.ts(405,3): error TS2323: Cannot redeclare exported variable 'handleDatabaseError'.
+src/utils/validationUtils.ts(405,3): error TS2484: Export declaration conflicts with exported declaration of 'handleDatabaseError'.
+src/utils/validationUtils.ts(406,3): error TS2323: Cannot redeclare exported variable 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(406,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthErrorMessage'.
+src/utils/validationUtils.ts(407,3): error TS2323: Cannot redeclare exported variable 'getAuthInstructions'.
+src/utils/validationUtils.ts(407,3): error TS2484: Export declaration conflicts with exported declaration of 'getAuthInstructions'.
+src/utils/validationUtils.ts(408,3): error TS2323: Cannot redeclare exported variable 'debugGraphQLContext'.
+src/utils/validationUtils.ts(408,3): error TS2484: Export declaration conflicts with exported declaration of 'debugGraphQLContext'.
+src/utils/validationUtils.ts(409,3): error TS2323: Cannot redeclare exported variable 'formatTokenResponse'.
+src/utils/validationUtils.ts(409,3): error TS2484: Export declaration conflicts with exported declaration of 'formatTokenResponse'.
+src/utils/validationUtils.ts(410,3): error TS2323: Cannot redeclare exported variable 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(410,3): error TS2484: Export declaration conflicts with exported declaration of 'checkGraphQLServerConfig'.
+src/utils/validationUtils.ts(411,3): error TS2323: Cannot redeclare exported variable 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(411,3): error TS2484: Export declaration conflicts with exported declaration of 'getGraphQLConfigTemplates'.
+src/utils/validationUtils.ts(412,3): error TS2323: Cannot redeclare exported variable 'SuccessMessages'.
+src/utils/validationUtils.ts(412,3): error TS2484: Export declaration conflicts with exported declaration of 'SuccessMessages'.
+src/utils/validationUtils.ts(413,3): error TS2323: Cannot redeclare exported variable 'ErrorMessages'.
+src/utils/validationUtils.ts(413,3): error TS2484: Export declaration conflicts with exported declaration of 'ErrorMessages'.
+src/utils/validationUtils.ts(414,3): error TS2323: Cannot redeclare exported variable 'ValidationError'.
+src/utils/validationUtils.ts(414,3): error TS2484: Export declaration conflicts with exported declaration of 'ValidationError'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/utils/validationUtils.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:13:37] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:16:06] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:16:54] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:16:57] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:17:19] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:24:25] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 20:36:00] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(41,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(41,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(111,28): error TS2304: Cannot find name 'chartPointsToInsert'.
+src/services/swissephService.ts(137,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(137,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(132,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(41,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(41,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(111,28): error TS2304: Cannot find name 'chartPointsToInsert'.
+src/services/swissephService.ts(137,23): error TS2323: Cannot redeclare exported variable 'getUserChartPoints'.
+src/services/swissephService.ts(137,23): error TS2393: Duplicate function implementation.
+src/services/swissephService.ts(132,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8910355591586914.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 20:36:23] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:03:18] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:09:56] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:10:06] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:10:18] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:10:30] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:10:48] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:12:05] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:12:18] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:12:31] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:13:27] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/hooks/swissephHook.ts(213,5): error TS2322: Type '{ julianDayET: number; julianDayUT: number; }' is not assignable to type 'number'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/hooks/swissephHook.ts(213,5): error TS2322: Type '{ julianDayET: number; julianDayUT: number; }' is not assignable to type 'number'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/hooks/swissephHook.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:13:35] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:13:57] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:15:09] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:15:28] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:16:37] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:16:45] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(61,5): error TS2554: Expected 4 arguments, but got 5.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(61,5): error TS2554: Expected 4 arguments, but got 5.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:18:12] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(61,5): error TS2554: Expected 4 arguments, but got 5.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(61,5): error TS2554: Expected 4 arguments, but got 5.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:18:39] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:19:25] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:21:13] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:21:22] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:23:16] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:23:45] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:24:45] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/hooks/swissephHook.ts(1,8): error TS2440: Import declaration conflicts with local declaration of 'swisseph'.
+src/hooks/swissephHook.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(5,22): error TS2724: '"../constants/astrologyConstants"' has no exported member named 'PLANET_IDS'. Did you mean 'PLANETS_IDS'?
+src/hooks/swissephHook.ts(12,8): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(12,8): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(12,17): error TS7031: Binding element 'SE_SUN' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(13,9): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(13,9): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(13,18): error TS7031: Binding element 'SE_MOON' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(14,12): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(14,12): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(14,21): error TS7031: Binding element 'SE_MERCURY' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(15,10): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(15,10): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(15,19): error TS7031: Binding element 'SE_VENUS' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(16,9): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(16,9): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(16,18): error TS7031: Binding element 'SE_MARS' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(17,12): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(17,12): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(17,21): error TS7031: Binding element 'SE_JUPITER' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(18,11): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(18,11): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(18,20): error TS7031: Binding element 'SE_SATURN' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(19,11): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(19,11): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(19,20): error TS7031: Binding element 'SE_URANUS' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(20,12): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(20,12): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(20,21): error TS7031: Binding element 'SE_NEPTUNE' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(21,10): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(21,10): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(21,19): error TS7031: Binding element 'SE_PLUTO' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(22,14): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(22,14): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(22,23): error TS7031: Binding element 'SE_TRUE_NODE' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(23,11): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(23,11): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(23,20): error TS7031: Binding element 'SE_CHIRON' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(24,3): error TS7005: Variable 'as' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(132,60): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'number'.
+src/hooks/swissephHook.ts(11,8): error TS1134: Variable declaration expected.
+src/hooks/swissephHook.ts(12,16): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(13,17): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(14,20): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(15,18): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(16,17): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(17,20): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(18,19): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(19,19): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(20,20): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(21,18): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(22,22): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(23,19): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(24,3): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(24,6): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/hooks/swissephHook.ts(1,8): error TS2440: Import declaration conflicts with local declaration of 'swisseph'.
+src/hooks/swissephHook.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(5,22): error TS2724: '"../constants/astrologyConstants"' has no exported member named 'PLANET_IDS'. Did you mean 'PLANETS_IDS'?
+src/hooks/swissephHook.ts(12,8): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(12,8): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(12,17): error TS7031: Binding element 'SE_SUN' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(13,9): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(13,9): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(13,18): error TS7031: Binding element 'SE_MOON' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(14,12): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(14,12): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(14,21): error TS7031: Binding element 'SE_MERCURY' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(15,10): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(15,10): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(15,19): error TS7031: Binding element 'SE_VENUS' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(16,9): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(16,9): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(16,18): error TS7031: Binding element 'SE_MARS' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(17,12): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(17,12): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(17,21): error TS7031: Binding element 'SE_JUPITER' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(18,11): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(18,11): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(18,20): error TS7031: Binding element 'SE_SATURN' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(19,11): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(19,11): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(19,20): error TS7031: Binding element 'SE_URANUS' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(20,12): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(20,12): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(20,21): error TS7031: Binding element 'SE_NEPTUNE' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(21,10): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(21,10): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(21,19): error TS7031: Binding element 'SE_PLUTO' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(22,14): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(22,14): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(22,23): error TS7031: Binding element 'SE_TRUE_NODE' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(23,11): error TS2451: Cannot redeclare block-scoped variable 'swisseph'.
+src/hooks/swissephHook.ts(23,11): error TS7031: Binding element 'swisseph' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(23,20): error TS7031: Binding element 'SE_CHIRON' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(24,3): error TS7005: Variable 'as' implicitly has an 'any' type.
+src/hooks/swissephHook.ts(132,60): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'number'.
+src/hooks/swissephHook.ts(11,8): error TS1134: Variable declaration expected.
+src/hooks/swissephHook.ts(12,16): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(13,17): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(14,20): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(15,18): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(16,17): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(17,20): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(18,19): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(19,19): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(20,20): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(21,18): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(22,22): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(23,19): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(24,3): error TS1005: ',' expected.
+src/hooks/swissephHook.ts(24,6): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/hooks/swissephHook.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:25:14] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:25:49] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:25:53] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:26:47] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:27:29] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:28:44] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:36:36] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/models/DailyNews.ts(2,10): error TS2395: Individual declarations in merged declaration 'DailyHoroscope' must be all exported or all local.
+src/models/DailyNews.ts(2,10): error TS2440: Import declaration conflicts with local declaration of 'DailyHoroscope'.
+src/models/DailyNews.ts(4,14): error TS2395: Individual declarations in merged declaration 'DailyHoroscope' must be all exported or all local.
+
+Error: ⨯ Unable to compile TypeScript:
+src/models/DailyNews.ts(2,10): error TS2395: Individual declarations in merged declaration 'DailyHoroscope' must be all exported or all local.
+src/models/DailyNews.ts(2,10): error TS2440: Import declaration conflicts with local declaration of 'DailyHoroscope'.
+src/models/DailyNews.ts(4,14): error TS2395: Individual declarations in merged declaration 'DailyHoroscope' must be all exported or all local.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/models/DailyNews.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:36:43] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/models/DailyNews.ts(92,53): error TS2552: Cannot find name 'DailyHoroscope'. Did you mean 'IDailyHoroscope'?
+src/models/DailyNews.ts(124,66): error TS2552: Cannot find name 'DailyHoroscope'. Did you mean 'IDailyHoroscope'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/models/DailyNews.ts(92,53): error TS2552: Cannot find name 'DailyHoroscope'. Did you mean 'IDailyHoroscope'?
+src/models/DailyNews.ts(124,66): error TS2552: Cannot find name 'DailyHoroscope'. Did you mean 'IDailyHoroscope'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/models/DailyNews.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:36:49] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/models/DailyNews.ts(124,66): error TS2552: Cannot find name 'DailyHoroscope'. Did you mean 'IDailyHoroscope'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/models/DailyNews.ts(124,66): error TS2552: Cannot find name 'DailyHoroscope'. Did you mean 'IDailyHoroscope'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/models/DailyNews.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:36:53] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:36:53] ERROR: Cannot read properties of undefined (reading 'setupDailyNewsTable')
+[2025-07-06 21:37:06] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:37:06] ERROR: Cannot read properties of undefined (reading 'setupDailyNewsTable')
+[2025-07-06 21:37:17] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:37:17] ERROR: Cannot read properties of undefined (reading 'setupDailyNewsTable')
+[2025-07-06 21:37:40] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:37:40] ERROR: Cannot read properties of undefined (reading 'setupDailyNewsTable')
+[2025-07-06 21:39:34] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:52:57] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:53:05] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:53:23] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:53:28] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:53:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,41): error TS2440: Import declaration conflicts with local declaration of 'AuthenticatedUser'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,41): error TS2440: Import declaration conflicts with local declaration of 'AuthenticatedUser'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/userResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:54:04] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(26,33): error TS2304: Cannot find name 'getUserFromToken'.
+src/graphql/resolvers/userResolver.ts(68,33): error TS2304: Cannot find name 'getUserFromToken'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(26,33): error TS2304: Cannot find name 'getUserFromToken'.
+src/graphql/resolvers/userResolver.ts(68,33): error TS2304: Cannot find name 'getUserFromToken'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/userResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5488687819267157.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-06 21:54:14] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:54:32] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:54:42] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:55:03] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:55:28] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:55:44] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:55:51] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:55:58] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 21:56:41] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:03:08] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:03:08] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:05:52] ERROR: uncaughtException: listen EADDRINUSE: address already in use :::3001
+Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at Function.listen (/Users/lucaseduardo/HoroscopeServer/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/index.ts:133:5)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8727482028043299.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-8727482028043299.js:114:20)
+[2025-07-06 22:06:13] ERROR: uncaughtException: listen EADDRINUSE: address already in use :::3001
+Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+    at listenInCluster (node:net:1969:12)
+    at Server.listen (node:net:2074:7)
+    at Function.listen (/Users/lucaseduardo/HoroscopeServer/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/index.ts:133:5)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-26710562467928356.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-26710562467928356.js:114:20)
+[2025-07-06 22:06:30] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:10:04] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:10:28] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:11:22] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:12:23] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:12:33] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-06 22:12:44] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:04:07] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:11:07] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:12:10] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(145,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(146,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(146,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(148,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(146,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(146,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(146,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(148,10): error TS1005: ':' expected.
+src/services/swissephService.ts(148,41): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(145,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(146,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(146,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(148,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(146,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(146,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(146,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(148,10): error TS1005: ':' expected.
+src/services/swissephService.ts(148,41): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1255156824052004.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1255156824052004.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1255156824052004.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-09 18:12:15] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:12:48] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:14:36] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:17:12] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:23:54] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:25:05] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:29:46] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:43:13] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:43:24] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:48:17] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:52:26] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/hooks/swissephHook.ts(117,71): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/hooks/swissephHook.ts(117,71): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/hooks/swissephHook.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-09 18:52:30] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-09 18:56:19] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:53:30] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:53:30] ERROR: DailyNews_1.DailyHoroscopeModel.setupDailyHoroscopeTable is not a function
+[2025-07-10 21:53:35] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:53:35] ERROR: DailyNews_1.DailyHoroscopeModel.setupDailyHoroscopeTable is not a function
+[2025-07-10 21:54:38] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:54:38] ERROR: DailyNews_1.DailyHoroscopeModel.setupDailyHoroscopeTable is not a function
+[2025-07-10 21:54:55] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:58:02] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:58:02] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:58:02] ERROR: Cannot read properties of undefined (reading 'setupDailyNewsTable')
+[2025-07-10 21:59:11] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 21:59:18] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 22:07:03] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 22:09:02] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 22:09:15] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 22:10:36] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-10 22:10:46] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:49:40] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:50:00] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:52:25] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:52:32] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(88,58): error TS2304: Cannot find name 'zodiac_sign'.
+src/graphql/resolvers/weeklyResolver.ts(93,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(88,58): error TS2304: Cannot find name 'zodiac_sign'.
+src/graphql/resolvers/weeklyResolver.ts(93,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:52:44] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(146,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(147,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(147,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(149,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(147,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(149,10): error TS1005: ':' expected.
+src/services/swissephService.ts(149,41): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(146,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(147,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(147,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(149,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(147,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(149,10): error TS1005: ':' expected.
+src/services/swissephService.ts(149,41): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:53:06] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(146,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(147,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(147,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(149,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(147,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(149,10): error TS1005: ':' expected.
+src/services/swissephService.ts(149,41): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(146,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(147,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(147,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(149,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(147,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(149,10): error TS1005: ':' expected.
+src/services/swissephService.ts(149,41): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:54:12] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(146,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(147,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(147,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(149,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(147,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(149,10): error TS1005: ':' expected.
+src/services/swissephService.ts(149,41): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/swissephService.ts(146,10): error TS2693: 'string' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(147,4): error TS2365: Operator '>' cannot be applied to types 'boolean' and '{ return: Promise<any>; }'.
+src/services/swissephService.ts(147,12): error TS2693: 'UserChartPoint' only refers to a type, but is being used as a value here.
+src/services/swissephService.ts(149,35): error TS2304: Cannot find name 'email'.
+src/services/swissephService.ts(147,1): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,2): error TS1128: Declaration or statement expected.
+src/services/swissephService.ts(147,27): error TS1011: An element access expression should take an argument.
+src/services/swissephService.ts(149,10): error TS1005: ':' expected.
+src/services/swissephService.ts(149,41): error TS1005: ',' expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/swissephService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:54:21] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(88,58): error TS2304: Cannot find name 'zodiac_sign'.
+src/graphql/resolvers/weeklyResolver.ts(93,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(88,58): error TS2304: Cannot find name 'zodiac_sign'.
+src/graphql/resolvers/weeklyResolver.ts(93,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:54:35] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:54:57] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:55:21] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:55:25] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:56:45] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/schemas/weeklySchema.ts(58,5): error TS2304: Cannot find name 'extend'.
+src/graphql/schemas/weeklySchema.ts(58,90): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,152): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,5): error TS1435: Unknown keyword or identifier. Did you mean 'extends'?
+src/graphql/schemas/weeklySchema.ts(58,23): error TS1005: '=' expected.
+src/graphql/schemas/weeklySchema.ts(58,109): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,173): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,175): error TS1160: Unterminated template literal.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/schemas/weeklySchema.ts(58,5): error TS2304: Cannot find name 'extend'.
+src/graphql/schemas/weeklySchema.ts(58,90): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,152): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,5): error TS1435: Unknown keyword or identifier. Did you mean 'extends'?
+src/graphql/schemas/weeklySchema.ts(58,23): error TS1005: '=' expected.
+src/graphql/schemas/weeklySchema.ts(58,109): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,173): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,175): error TS1160: Unterminated template literal.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/schemas/weeklySchema.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:56:50] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/schemas/weeklySchema.ts(58,5): error TS2304: Cannot find name 'extend'.
+src/graphql/schemas/weeklySchema.ts(58,90): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,152): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,5): error TS1435: Unknown keyword or identifier. Did you mean 'extends'?
+src/graphql/schemas/weeklySchema.ts(58,23): error TS1005: '=' expected.
+src/graphql/schemas/weeklySchema.ts(58,109): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,173): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,175): error TS1160: Unterminated template literal.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/schemas/weeklySchema.ts(58,5): error TS2304: Cannot find name 'extend'.
+src/graphql/schemas/weeklySchema.ts(58,90): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,152): error TS2304: Cannot find name 'WeeklyHoroscope'.
+src/graphql/schemas/weeklySchema.ts(58,5): error TS1435: Unknown keyword or identifier. Did you mean 'extends'?
+src/graphql/schemas/weeklySchema.ts(58,23): error TS1005: '=' expected.
+src/graphql/schemas/weeklySchema.ts(58,109): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,173): error TS1005: ';' expected.
+src/graphql/schemas/weeklySchema.ts(58,175): error TS1160: Unterminated template literal.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/schemas/weeklySchema.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 12:57:01] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:57:17] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:57:20] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:57:34] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:57:57] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:58:35] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:58:52] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 12:59:39] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:04:47] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:05:24] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:11:25] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:11:44] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:11:53] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:12:29] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:14:01] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:14:04] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:16:26] ERROR: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+[2025-07-11 13:25:57] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/oracleService.ts(3,27): error TS2307: Cannot find module '../utils/ai/ChatOi' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/services/oracleService.ts(3,27): error TS2307: Cannot find module '../utils/ai/ChatOi' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/services/oracleService.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 13:26:12] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/userResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 13:26:49] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/userResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)

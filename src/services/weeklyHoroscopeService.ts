@@ -1,5 +1,5 @@
-import { DailyHoroscopeModel } from '../models/DailyNews';
-import { buildUserContext } from '../utils/ChatOi';
+import { NewsDatabase } from '../models/DailyNews';
+import { buildUserContext } from '../utils/ai/ChatOi';
 import { askOpenAI } from './openaiService';
 import { getCurrentPlanetsAdvanced } from './astrologyInsightsService';
 import { getUserForQuery } from './userService';
@@ -67,10 +67,13 @@ ${currentPlanets}
 
 WEEK: ${weekStartDate.toLocaleDateString()} to ${weekEndDate.toLocaleDateString()}
 
-Based on this user's birth chart and current planetary positions, provide personalized daily advice for the entire week.
+Based on this user's birth chart and current planetary positions, provide:
+1. A short, insightful weekly overview (2-4 sentences) summarizing the main astrological themes, opportunities, and challenges for the week.
+2. Personalized daily advice for each day of the week based on the actual day of today, 7 days ahead.
 
 Please respond ONLY with a JSON object in this exact format:
 {
+  "weeklyOverview": "short summary of the week's main astrological themes and advice",
   "weekdays": {
     "monday": "personalized advice for Monday based on chart and current planets",
     "tuesday": "personalized advice for Tuesday based on chart and current planets", 
@@ -82,24 +85,31 @@ Please respond ONLY with a JSON object in this exact format:
   }
 }
 
-Each advice should be 2-3 sentences focusing on:
+Each daily advice should be 2-3 sentences focusing on:
 - How the current planetary positions affect their personal chart
 - Specific guidance for love, career, health, or finances
 - Practical actions they can take that day
 
-Make it personal and specific to their birth chart placements.
+Make both the overview and daily advice personal and specific to their birth chart placements.
 `;
 
     const response = await askOpenAI(
       'You are a master astrologer providing personalized daily advice based on natal charts and current planetary transits. Respond only with valid JSON.',
       prompt
+
     );
 
+
     try {
-      return JSON.parse(response);
+      // Remove code block markers if present
+      const cleaned = response
+        .replace(/```json/g, '')
+        .replace(/```/g, '')
+        .trim();
+      return JSON.parse(cleaned);
     } catch (error) {
-      console.error('Error parsing ChatOI response:', error);
-     
+      console.error('Error parsing ChatOI response:', error, 'Raw response:', response);
+      return null;
     }
   }
 
@@ -118,27 +128,31 @@ Make it personal and specific to their birth chart placements.
     
     const zodiacSign = this.getZodiacSignFromDate(new Date(userData.birthdate));
     const weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-
-    for (let i = 0; i < weekdays.length; i++) {
-      const weekday = weekdays[i];
-      const currentDate = new Date(weekStartDate);
-      currentDate.setDate(weekStartDate.getDate() + i);
-
+    const newsDb = new NewsDatabase();
+    // Start from today, not Monday
+    const today = new Date();
+    for (let i = 0; i < 7; i++) {
+      const currentDate = new Date(today);
+      currentDate.setDate(today.getDate() + i);
+      const jsDay = currentDate.getDay();
+      const weekday = weekdays[jsDay === 0 ? 6 : jsDay - 1];
+      // Use the real weekday name for each date as the key
+      const realWeekday = weekdays[jsDay === 0 ? 6 : jsDay - 1];
       const dailyHoroscope = {
-        weekday: weekday as any,
+        weekday: realWeekday as any,
         date: currentDate,
         zodiacSign: zodiacSign,
-        title: `Personal Guidance - ${weekday.charAt(0).toUpperCase() + weekday.slice(1)}`,
-        prediction: weeklyAdvice.weekdays[weekday] || "The stars guide you today.",
+        title: `Personal Guidance - ${realWeekday.charAt(0).toUpperCase() + realWeekday.slice(1)}`,
+        prediction: weeklyAdvice.weekdays[realWeekday] || "The stars guide you today.",
         mood: 'good' as any,
         energy: 'medium' as any,
-        isPublished: true
+        isPublished: true,
+        weeklyOverview: i === 0 ? weeklyAdvice.weeklyOverview : null // Only first day gets overview
       };
-
       try {
-        await DailyHoroscopeModel.addDailyHoroscope(dailyHoroscope);
+        await newsDb.addDailyNews(dailyHoroscope, userData.id);
       } catch (error) {
-        console.error(`Error saving ${weekday} horoscope:`, error);
+        console.error(`Error saving ${realWeekday} horoscope:`, error);
       }
     }
   }
@@ -160,27 +174,50 @@ Make it personal and specific to their birth chart placements.
       const zodiacSign = this.getZodiacSignFromDate(new Date(userData.birthdate));
       const weekStartString = weekStartDate.toISOString().split('T')[0];
       
-      const dailyHoroscopes = await DailyHoroscopeModel.getDailyHoroscopesByWeek(zodiacSign, weekStartString);
-      
+      const newsDb = new NewsDatabase();
+      const userId = Number(userData.id);
+      // Query all daily news for this user, sign, and week
+      // Start from today, not Monday
+      const weekdaysArr = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+      const today = new Date();
+      const weekDates: Date[] = [];
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() + i);
+        weekDates.push(d);
+      }
+      const weekDateStrings = weekDates.map(d => d.toISOString().split('T')[0]);
+      // Fetch all daily news for the week
+      const dailyHoroscopes = [];
+      let weeklyOverview = '';
+      const weekdays: any = {};
+      for (let i = 0; i < weekDateStrings.length; i++) {
+        const dateStr = weekDateStrings[i];
+        const entry = await newsDb.getDailyNews(userId, zodiacSign, dateStr);
+        if (entry) {
+          dailyHoroscopes.push(entry);
+          if (i === 0 && entry.weeklyOverview) {
+            weeklyOverview = entry.weeklyOverview;
+          }
+          // Use the real weekday name for each date as the key
+          const jsDay = weekDates[i].getDay();
+          const realWeekday = weekdaysArr[jsDay === 0 ? 6 : jsDay - 1];
+          weekdays[realWeekday] = {
+            date: entry.date,
+            advice: entry.prediction,
+            mood: entry.mood,
+            energy: entry.energy
+          };
+        }
+      }
       if (dailyHoroscopes.length === 0) {
         return null;
       }
-
-      // Format response
-      const weekdays: any = {};
-      dailyHoroscopes.forEach((horoscope: any) => {
-        weekdays[horoscope.weekday] = {
-          date: horoscope.date,
-          advice: horoscope.prediction,
-          mood: horoscope.mood,
-          energy: horoscope.energy
-        };
-      });
-
       return {
-        weekStartDate,
+        weekStartDate: today,
         zodiacSign,
-        weekdays
+        weekdays,
+        weeklyOverview
       };
 
     } catch (error) {

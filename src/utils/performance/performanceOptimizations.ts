@@ -1,7 +1,7 @@
 // src/utils/performanceOptimizations.ts
 
-import { getUserChartPoints } from '../services/swissephService';
-import { connection } from '../database/connection';
+import { getUserChartPoints } from '../../services/swissephService';
+import { connection } from '../../database/connection';
 
 /**
  * In-memory cache for user chart points (per session).

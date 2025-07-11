@@ -1,6 +1,6 @@
 import { connection } from '../database/connection';
 import { RowDataPacket, ResultSetHeader } from 'mysql2';
-import { askOracle } from '../utils/ChatOi';
+import { askOracle } from '../utils/ai/ChatOi';
 import  {OracleQuestion} from '../interfaces/oracleInterface';
 
 

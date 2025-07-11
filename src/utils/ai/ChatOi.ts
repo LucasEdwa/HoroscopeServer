@@ -1,7 +1,7 @@
-import { getUserForQuery } from '../services/userService';
-import { askOpenAI } from '../services/openaiService';
-import { formatChartForAI } from '../utils/chartFormatters';
-import { getDailyAstrologyInsights, getCurrentPlanetsAdvanced } from '../services/astrologyInsightsService';
+import { getUserForQuery } from '../../services/userService';
+import { askOpenAI } from '../../services/openaiService';
+import { formatChartForAI } from '../formatters/chartFormatters';
+import { getDailyAstrologyInsights, getCurrentPlanetsAdvanced } from '../../services/astrologyInsightsService';
 
 export async function askOracle(question: string, chart: any, email?: string): Promise<string> {
   let userContext = '';
