@@ -3,6 +3,8 @@ import express, { Request } from 'express';
 import cors from 'cors';
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
+import { createDailyNewsTable } from './models/DailyNews';
+
 
 import { connection } from './database/connection';
 import { Logger } from './models/Logger';
@@ -10,12 +12,13 @@ import { UserDatabase } from './models/UserDatabase';
 import { SignsDatabase } from './models/Signs';
 import { OracleQuestionsTable } from './models/OracleQuestions';
 import playground from 'graphql-playground-middleware-express';
-  import { userTypeDefs } from './graphql/schemas/userSchema';
+import { userTypeDefs } from './graphql/schemas/userSchema';
 import { oracleTypeDefs } from './graphql/schemas/oracleSchema';
 import { userResolvers } from './graphql/resolvers/userResolver';
 import { oracleResolvers } from './graphql/resolvers/oracleResolver';
 import { weeklyHoroscopeResolvers } from './graphql/resolvers/weeklyResolver';
 import { weeklyHoroscopeTypeDefs } from './graphql/schemas/weeklySchema';
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -70,8 +73,7 @@ const createRootValue = (context: any) => {
     deleteOracleQuestion: (args: any) => oracleResolvers.Mutation?.deleteOracleQuestion(args, context),
 
     // Weekly horoscope queries
-    weeklyHoroscope: (args: any) => weeklyHoroscopeResolvers.Query?.weeklyHoroscope(undefined, args, context),
-    
+       weeklyHoroscopeByUser: (args: any) => weeklyHoroscopeResolvers.Query?.weeklyHoroscopeByUser(undefined, args),
   };
 };
 
@@ -162,6 +164,7 @@ app.listen(PORT, async () => {
     await signsDatabase.init();
     // await userDatabase.dropAllUserRelatedTables();
     await OracleQuestionsTable.setupOracleQuestionsTable();
+    await createDailyNewsTable();
     console.log('User database initialized successfully.');
     console.log('Signs database initialized successfully.');
     console.log('Daily news table initialized successfully.');
