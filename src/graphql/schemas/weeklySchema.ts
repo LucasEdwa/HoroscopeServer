@@ -28,7 +28,7 @@ export const weeklyHoroscopeTypeDefs = `
     weekday: Weekdays!
     date: String!
     zodiacSign: String!
-    title: String!
+    title: String
     prediction: String!
     loveLife: String
     career: String
@@ -43,6 +43,7 @@ export const weeklyHoroscopeTypeDefs = `
     isPublished: Boolean!
     createdAt: String!
     updatedAt: String!
+    weeklyOverview: String
   }
 
   type WeeklyHoroscope {
@@ -52,11 +53,13 @@ export const weeklyHoroscopeTypeDefs = `
     zodiacSign: String
     dailyHoroscopes: [DailyHoroscope!]!
     weeklyOverview: String
+    todayHoroscope: DailyHoroscope
     createdAt: String!
     updatedAt: String!
   }
 
   extend type Query {
     weeklyHoroscope(zodiacSign: String!, weekStartDate: String!): WeeklyHoroscope
+    weeklyHoroscopeByUser(email: String!, weekStartDate: String!): WeeklyHoroscope
   }
 `;

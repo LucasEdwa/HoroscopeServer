@@ -5,6 +5,7 @@ export interface IWeeklyHoroscope {
   zodiacSign?: string;
   dailyHoroscopes: IDailyHoroscope[];
   weeklyOverview?: string;
+  todayHoroscope?: IDailyHoroscope;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -36,6 +37,7 @@ export interface IDailyHoroscope {
   energy: "high" | "medium" | "low";
   imageUrl?: string;
   isPublished: boolean;
+  weeklyOverview?: string;
   createdAt: Date;
   updatedAt: Date;
 }
