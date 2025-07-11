@@ -3784,3 +3784,131 @@ src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '.
     at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
     at Module.load (node:internal/modules/cjs/loader:1307:32)
     at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 14:35:07] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/userResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 14:35:50] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/userResolver.ts(8,47): error TS2307: Cannot find module '../../utils/auth/authUtils' or its corresponding type declarations.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/userResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-1171807276660084.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 14:52:32] ERROR: Failed to open the referenced table 'weekly_news'
+[2025-07-11 14:55:22] ERROR: (0 , DailyNews_1.createWeeklyNewsTable) is not a function
+[2025-07-11 15:30:30] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 15:30:39] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 15:31:27] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 15:31:29] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(77,9): error TS2561: Object literal may only specify known properties, but 'todayHoroscope' does not exist in type 'IWeeklyHoroscope'. Did you mean to write 'dailyHoroscopes'?
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-5624557691537071.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
+[2025-07-11 15:34:45] ERROR: uncaughtException: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(80,9): error TS2322: Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; }[]' is not assignable to type 'IDailyHoroscope[]'.
+  Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; }' is not assignable to type 'IDailyHoroscope'.
+    Types of property 'weekday' are incompatible.
+      Type 'string' is not assignable to type 'IWeekdays'.
+src/graphql/resolvers/weeklyResolver.ts(82,9): error TS2322: Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; } | undefined' is not assignable to type 'IDailyHoroscope | undefined'.
+  Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; }' is not assignable to type 'IDailyHoroscope'.
+    Types of property 'weekday' are incompatible.
+      Type 'string' is not assignable to type 'IWeekdays'.
+
+Error: ⨯ Unable to compile TypeScript:
+src/graphql/resolvers/weeklyResolver.ts(80,9): error TS2322: Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; }[]' is not assignable to type 'IDailyHoroscope[]'.
+  Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; }' is not assignable to type 'IDailyHoroscope'.
+    Types of property 'weekday' are incompatible.
+      Type 'string' is not assignable to type 'IWeekdays'.
+src/graphql/resolvers/weeklyResolver.ts(82,9): error TS2322: Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; } | undefined' is not assignable to type 'IDailyHoroscope | undefined'.
+  Type '{ id: string; weekday: string; date: any; zodiacSign: any; title: string; prediction: any; mood: any; energy: any; isPublished: boolean; createdAt: any; updatedAt: any; weeklyOverview: any; }' is not assignable to type 'IDailyHoroscope'.
+    Types of property 'weekday' are incompatible.
+      Type 'string' is not assignable to type 'IWeekdays'.
+
+    at Object.<anonymous> (/Users/lucaseduardo/HoroscopeServer/src/graphql/resolvers/weeklyResolver.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1550:14)
+    at Module._compile (/Users/lucaseduardo/HoroscopeServer/node_modules/source-map-support/source-map-support.js:568:25)
+    at Module.m._compile (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-47385539257877496.js:69:33)
+    at node:internal/modules/cjs/loader:1702:10
+    at require.extensions..jsx.require.extensions..js (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-47385539257877496.js:114:20)
+    at require.extensions.<computed> (/private/var/folders/nq/4xx3q0597db6hlqnp56k96km0000gn/T/ts-node-dev-hook-47385539257877496.js:71:20)
+    at Object.nodeDevHook [as .ts] (/Users/lucaseduardo/HoroscopeServer/node_modules/ts-node-dev/lib/hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1307:32)
+    at Function._load (node:internal/modules/cjs/loader:1121:12)
