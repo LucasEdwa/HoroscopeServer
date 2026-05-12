@@ -7,7 +7,6 @@ export async function geocodeLocation(city: string, country: string): Promise<{ 
       throw new Error('Geocoding API key is missing. Please set GEOCODING_API_KEY in your .env file.');
     }
 
-    console.log('Geocoding request:', { city, country, apiKey }); // Log the request details
 
     const response = await axios.get('https://api.opencagedata.com/geocode/v1/json', {
       params: {
@@ -38,7 +37,15 @@ export async function geocodeLocation(city: string, country: string): Promise<{ 
       timezoneOffset 
     };
   } catch (error: any) {
-    console.error('Error geocoding location:', error.message || error);
-    throw new Error('Failed to geocode location');
+    const status = error.response?.status;
+    const body = error.response?.data;
+    console.error('Error geocoding location:', { status, body, message: error.message });
+    if (status === 401 || status === 403) {
+      throw new Error('Geocoding failed: invalid or unauthorized API key. Restart the server after updating GEOCODING_API_KEY, or verify the key at opencagedata.com/dashboard.');
+    }
+    if (status === 402 || status === 429) {
+      throw new Error('Geocoding failed: API quota exceeded.');
+    }
+    throw new Error(`Failed to geocode location${error.message ? `: ${error.message}` : ''}`);
   }
 }

@@ -32,7 +32,7 @@ export const userTypeDefs = `
     success: Boolean!
     message: String!
     email: String
-    token: String!
+    token: String
   }
 
   type Query {

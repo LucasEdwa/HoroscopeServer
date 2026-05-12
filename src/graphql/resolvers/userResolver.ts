@@ -2,6 +2,7 @@
 
 import { getUserByEmail, createUser, getUserForQuery } from '../../services/userService';
 import { calculateAndSaveUserChart } from '../../services/swissephService';
+import { geocodeLocation } from '../../services/geocodingService';
 import { User } from '../../interfaces/userInterface';
 import jwt from 'jsonwebtoken';
 import { Request } from 'express';
@@ -132,6 +133,10 @@ export const userResolvers = {
       country: string;
     }) {
       try {
+        // Validate location BEFORE creating the user so a geocoding failure
+        // does not leave an orphan user row in the database.
+        await geocodeLocation(city, country);
+
         // Create user and save birth details
         const userId = await createUser(name, email, password, dateOfBirth, timeOfBirth, city, country);
 
