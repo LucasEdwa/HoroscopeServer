@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export async function geocodeLocation(city: string, country: string): Promise<{ latitude: number; longitude: number; timezone: string; timezoneOffset: number }> {
+export async function geocodeLocation(city: string, country: string): Promise<{ latitude: number; longitude: number; timezone: string; timezoneOffset: number; formatted?: string }> {
   try {
     const apiKey = process.env.GEOCODING_API_KEY; // Ensure this is set in your .env file
     if (!apiKey) {
@@ -15,6 +15,8 @@ export async function geocodeLocation(city: string, country: string): Promise<{ 
       }
     });
 
+    console.log(`[Geocoding] Query: "${city}, ${country}"`);
+    console.log(`[Geocoding] Results found: ${response.data.results.length}`);
 
     if (response.data.results.length === 0) {
       console.error('No geocoding results found for:', { city, country });
@@ -24,17 +26,22 @@ export async function geocodeLocation(city: string, country: string): Promise<{ 
     const result = response.data.results[0];
     const { lat, lng } = result.geometry;
     
+    console.log(`[Geocoding] Result 1: ${result.formatted}`);
+    console.log(`[Geocoding] Coordinates: lat=${lat}, lng=${lng}`);
+    
     // Extract timezone information from the response
     const timezone = result.annotations?.timezone?.name || 'UTC';
     const timezoneOffset = result.annotations?.timezone?.offset_sec ? 
       result.annotations.timezone.offset_sec / 3600 : 0; // Convert seconds to hours
     
+    console.log(`[Geocoding] Timezone: ${timezone} (offset=${timezoneOffset}h)`);
   
     return { 
       latitude: lat, 
       longitude: lng, 
       timezone, 
-      timezoneOffset 
+      timezoneOffset,
+      formatted: result.formatted
     };
   } catch (error: any) {
     const status = error.response?.status;

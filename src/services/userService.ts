@@ -5,6 +5,7 @@ import { User, UserBirthData, ChartPoint } from '../interfaces/userInterface';
 import { normalizeBirthTime } from '../utils/validation/validationUtils';
 import { geocodeLocation } from './geocodingService';
 import { calculateSwissEphChart } from '../hooks/swissephHook';
+import { validateGeocodedTimezone, enforceGeocodedTimezone, logTimezoneDebugInfo } from '../utils/astrology/timezoneUtils';
 
 export async function getUserBirthData(email: string): Promise<UserBirthData | null> {
   const [userRows]: any = await connection.execute(
@@ -142,9 +143,13 @@ export async function createUserWithChart(
   city: string,
   country: string
 ) {
+  console.log(`\n========== Starting signup for ${email} ==========`);
+  console.log(`User: ${name}, DOB: ${dateOfBirth}, Time: ${timeOfBirth}, Location: ${city}, ${country}`);
+  
   let normalizedBirthTime: string;
   try {
     normalizedBirthTime = normalizeBirthTime(timeOfBirth);
+    console.log(`✓ Birth time normalized to: ${normalizedBirthTime}`);
   } catch (error: any) {
     throw new Error(`Birth time parsing failed: ${error.message || error}`);
   }
@@ -154,7 +159,22 @@ export async function createUserWithChart(
     const geoData = await geocodeLocation(city, country);
     latitude = geoData.latitude;
     longitude = geoData.longitude;
-    timezoneOffset = geoData.timezoneOffset;
+    
+    // Validate and enforce geocoded timezone
+    const validatedTimezone = validateGeocodedTimezone(geoData, city);
+    timezoneOffset = enforceGeocodedTimezone(validatedTimezone);
+    
+    if (validatedTimezone.confidence === 'low') {
+      throw new Error(
+        `Geocoding confidence is LOW for "${city}, ${country}". ` +
+        `The location may not have been recognized correctly. ` +
+        `Returned coordinates: lat=${latitude}, lng=${longitude}, timezone=${geoData.timezone}. ` +
+        `Please verify the city and country names are spelled correctly.`
+      );
+    }
+    
+    logTimezoneDebugInfo(geoData, validatedTimezone);
+    console.log(`✓ Geocoded location: lat=${latitude}, lng=${longitude}, timezone=${geoData.timezone}, offset=${timezoneOffset}h`);
   } catch (error: any) {
     throw new Error(`Geocoding failed for "${city}, ${country}": ${error.message || error}`);
   }
@@ -180,6 +200,7 @@ export async function createUserWithChart(
 
     let chartData;
     try {
+      console.log(`Chart calculation: Birth date=${dateOfBirth}, Birth time=${normalizedBirthTime}, Location=(${latitude}, ${longitude}), Timezone offset=${timezoneOffset}`);
       chartData = calculateSwissEphChart(
         dateOfBirth,
         normalizedBirthTime,
@@ -187,6 +208,7 @@ export async function createUserWithChart(
         longitude,
         timezoneOffset
       );
+      console.log('Swiss Ephemeris calculation completed successfully');
     } catch (error: any) {
       await db.rollback();
       db.release();
@@ -197,13 +219,16 @@ export async function createUserWithChart(
     const chartPointsToInsert: ChartPoint[] = [];
 
     Object.entries(chartData.planets).forEach(([planetName, planetData]) => {
+      const housePosition = calculateHousePosition(planetData.longitude, houseCusps);
+      console.log(`Debug: Processing planet '${planetName}' with sign '${planetData.sign}' at longitude ${planetData.longitude}`);
+      
       chartPointsToInsert.push({
         user_id: userId,
         name: planetName,
         longitude: planetData.longitude,
         latitude,
         sign: planetData.sign,
-        house: calculateHousePosition(planetData.longitude, houseCusps),
+        house: housePosition,
         degree: planetData.degree,
         minute: planetData.minute,
         second: planetData.second,
@@ -217,13 +242,16 @@ export async function createUserWithChart(
 
     (['ascendant', 'midheaven'] as const).forEach((point) => {
       const pointData = chartData.houses[point];
+      const housePosition = calculateHousePosition(pointData.longitude, houseCusps);
+      console.log(`Debug: Processing house point '${point}' with sign '${pointData.sign}' at longitude ${pointData.longitude}`);
+      
       chartPointsToInsert.push({
         user_id: userId,
         name: point,
         longitude: pointData.longitude,
         latitude,
         sign: pointData.sign,
-        house: calculateHousePosition(pointData.longitude, houseCusps),
+        house: housePosition,
         degree: pointData.degree,
         minute: pointData.minute,
         second: pointData.second,
@@ -251,7 +279,11 @@ export async function createUserWithChart(
       );
     }
 
+    console.log(`✓ User chart created successfully with ${chartPointsToInsert.length} chart points`);
+
     await db.commit();
+    console.log(`✓ Signup completed successfully for ${email} (user_id=${userId})`);
+    console.log(`========== End signup ==========\n`);
     return userId;
   } catch (error) {
     await db.rollback();

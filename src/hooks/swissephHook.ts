@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { ChartPoint } from '../interfaces/userInterface';
 import {ZODIAC_SIGNS,PLANET_IDS} from '../constants/astrologyConstants';
+import { normalizeBirthTime } from '../utils/validation/validationUtils';
 
 const EPHE_PATH = process.env.EPHE_PATH || path.join(__dirname, '../../ephe');
 const REQUIRED_FILE = 'seas_18.se1';
@@ -106,8 +107,15 @@ export function calculateSwissEphChart(
     throw new Error('Invalid input data for Swiss Ephemeris calculations');
   }
   const [year, month, day] = birthdate.split('-').map(Number);
-  const [hours, minutes, seconds = 0] = birthtime.split(':').map(Number);
+  const [hours, minutes, seconds] = normalizeBirthTime(birthtime).split(':').map(Number);
   const offsetHours = timezoneOffset !== undefined ? timezoneOffset : Math.round(longitude / 15);
+  
+  console.log(`\n[SwissEph] === Chart Calculation ===`);
+  console.log(`[SwissEph] Birth date: ${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`);
+  console.log(`[SwissEph] Birth time (local): ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+  console.log(`[SwissEph] Location: latitude=${latitude}, longitude=${longitude}`);
+  console.log(`[SwissEph] Timezone offset: ${offsetHours}h (provided=${timezoneOffset}, calculated from lng=${Math.round(longitude / 15)}h)`);
+  
   let utcHours = hours - offsetHours;
   let utcDay = day, utcMonth = month, utcYear = year;
   if (utcHours >= 24) {
@@ -117,12 +125,19 @@ export function calculateSwissEphChart(
     utcHours += 24; utcDay -= 1;
     if (utcDay < 1) { utcMonth -= 1; if (utcMonth < 1) { utcMonth = 12; utcYear -= 1; } utcDay = 30; }
   }
+  
+  console.log(`[SwissEph] Birth time (UTC): ${utcHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} on ${utcYear}-${utcMonth.toString().padStart(2, '0')}-${utcDay.toString().padStart(2, '0')}`);
+  
   const julianDay = swisseph.swe_utc_to_jd(
     utcYear, utcMonth, utcDay, utcHours, minutes, seconds, swisseph.SE_GREG_CAL
   );
   if ('error' in julianDay) handleSwissEphError('convert date to Julian', julianDay.error);
   const planets = getAllPlanets(julianDay.julianDayUT);
   const houseData = calculateHouses(julianDay.julianDayUT, latitude, longitude);
+  
+  console.log(`[SwissEph] Ascendant (longitude): ${houseData.ascendant}°`);
+  console.log(`[SwissEph] === End Chart Calculation ===\n`);
+  
   return {
     longitude: houseData.ascendant,
     planets,

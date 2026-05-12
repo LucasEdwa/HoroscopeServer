@@ -99,6 +99,40 @@ export function validateBirthData(dateOfBirth: string, timeOfBirth: string, city
   };
 }
 
+export function normalizeBirthTime(timeOfBirth: string): string {
+  const trimmedTime = timeOfBirth.trim();
+  const match = trimmedTime.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AP]M)?$/i);
+
+  if (!match) {
+    throw new ValidationError("Birth time must use a valid time format such as 12:35 PM or 23:35:00.");
+  }
+
+  let hours = Number(match[1]);
+  const minutes = Number(match[2]);
+  const seconds = match[3] ? Number(match[3]) : 0;
+  const meridiem = match[4]?.toUpperCase();
+
+  if (minutes < 0 || minutes > 59 || seconds < 0 || seconds > 59) {
+    throw new ValidationError("Birth time must have valid minutes and seconds.");
+  }
+
+  if (meridiem) {
+    if (hours < 1 || hours > 12) {
+      throw new ValidationError("Birth time hour must be between 1 and 12 when using AM/PM.");
+    }
+
+    if (meridiem === 'AM') {
+      hours = hours === 12 ? 0 : hours;
+    } else {
+      hours = hours === 12 ? 12 : hours + 12;
+    }
+  } else if (hours < 0 || hours > 23) {
+    throw new ValidationError("Birth time hour must be between 0 and 23.");
+  }
+
+  return [hours, minutes, seconds].map((value) => String(value).padStart(2, '0')).join(':');
+}
+
 // Database error handler
 export function handleDatabaseError(error: any): string {
   const errorMessage = error.message || error.toString();
