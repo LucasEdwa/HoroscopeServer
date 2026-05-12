@@ -1,8 +1,6 @@
 /// <reference path="../../../types/express/json.d.ts" />
 
-import { getUserByEmail, createUser, getUserForQuery } from '../../services/userService';
-import { calculateAndSaveUserChart } from '../../services/swissephService';
-import { geocodeLocation } from '../../services/geocodingService';
+import { getUserByEmail, createUserWithChart, getUserForQuery } from '../../services/userService';
 import { User } from '../../interfaces/userInterface';
 import jwt from 'jsonwebtoken';
 import { Request } from 'express';
@@ -133,15 +131,9 @@ export const userResolvers = {
       country: string;
     }) {
       try {
-        // Validate location BEFORE creating the user so a geocoding failure
-        // does not leave an orphan user row in the database.
-        await geocodeLocation(city, country);
-
-        // Create user and save birth details
-        const userId = await createUser(name, email, password, dateOfBirth, timeOfBirth, city, country);
-
-        // Calculate and save user's astrological chart
-        await calculateAndSaveUserChart(email);
+        // Create the user, birth data, and chart in one transaction so any
+        // chart failure rolls back the account creation.
+        const userId = await createUserWithChart(name, email, password, dateOfBirth, timeOfBirth, city, country);
 
         return {
           success: true,
@@ -149,9 +141,11 @@ export const userResolvers = {
         };
       } catch (error: any) {
         console.error('Signup error:', error.message || error);
+        const message = error.message || 'Error creating user';
+        
         return {
           success: false,
-          message: error.message || 'Error creating user'
+          message
         };
       }
     },

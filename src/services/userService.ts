@@ -2,6 +2,9 @@ import bcrypt from 'bcrypt';
 import { connection } from '../database/connection';
 import { calculateAndSaveUserChart } from './swissephService';
 import { User, UserBirthData, ChartPoint } from '../interfaces/userInterface';
+import { normalizeBirthTime } from '../utils/validation/validationUtils';
+import { geocodeLocation } from './geocodingService';
+import { calculateSwissEphChart } from '../hooks/swissephHook';
 
 export async function getUserBirthData(email: string): Promise<UserBirthData | null> {
   const [userRows]: any = await connection.execute(
@@ -89,6 +92,8 @@ export async function createUser(
   city: string,
   country: string
 ) {
+  const normalizedBirthTime = normalizeBirthTime(timeOfBirth);
+
   // Hash password
   const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -103,11 +108,159 @@ export async function createUser(
   // Insert user details
   await connection.execute(
     'INSERT INTO user_details (user_id, birthdate, birthtime, birth_city, birth_country) VALUES (?, ?, ?, ?, ?)',
-    [userId, dateOfBirth, timeOfBirth, city, country]
+    [userId, dateOfBirth, normalizedBirthTime, city, country]
   );
 
   return userId;
 }
+
+function calculateHousePosition(planetLongitude: number, houseCusps: number[]): number {
+  const normalizedLon = ((planetLongitude % 360) + 360) % 360;
+
+  for (let i = 0; i < 12; i++) {
+    const currentHouse = houseCusps[i];
+    const nextHouse = houseCusps[(i + 1) % 12];
+
+    if (nextHouse > currentHouse) {
+      if (normalizedLon >= currentHouse && normalizedLon < nextHouse) {
+        return i + 1;
+      }
+    } else if (normalizedLon >= currentHouse || normalizedLon < nextHouse) {
+      return i + 1;
+    }
+  }
+
+  return 1;
+}
+
+export async function createUserWithChart(
+  name: string,
+  email: string,
+  password: string,
+  dateOfBirth: string,
+  timeOfBirth: string,
+  city: string,
+  country: string
+) {
+  let normalizedBirthTime: string;
+  try {
+    normalizedBirthTime = normalizeBirthTime(timeOfBirth);
+  } catch (error: any) {
+    throw new Error(`Birth time parsing failed: ${error.message || error}`);
+  }
+
+  let latitude: number, longitude: number, timezoneOffset: number;
+  try {
+    const geoData = await geocodeLocation(city, country);
+    latitude = geoData.latitude;
+    longitude = geoData.longitude;
+    timezoneOffset = geoData.timezoneOffset;
+  } catch (error: any) {
+    throw new Error(`Geocoding failed for "${city}, ${country}": ${error.message || error}`);
+  }
+
+  const db = await connection.getConnection();
+
+  try {
+    await db.beginTransaction();
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const [userResult]: any = await db.execute(
+      'INSERT INTO users (username, email, password, registered) VALUES (?, ?, ?, ?)',
+      [name, email, hashedPassword, Math.floor(Date.now() / 1000)]
+    );
+
+    const userId = userResult.insertId;
+
+    await db.execute(
+      'INSERT INTO user_details (user_id, birthdate, birthtime, birth_city, birth_country) VALUES (?, ?, ?, ?, ?)',
+      [userId, dateOfBirth, normalizedBirthTime, city, country]
+    );
+
+    let chartData;
+    try {
+      chartData = calculateSwissEphChart(
+        dateOfBirth,
+        normalizedBirthTime,
+        latitude,
+        longitude,
+        timezoneOffset
+      );
+    } catch (error: any) {
+      await db.rollback();
+      db.release();
+      throw new Error(`Swiss Ephemeris calculation failed: ${error.message || error}`);
+    }
+
+    const houseCusps = chartData.houses.houses;
+    const chartPointsToInsert: ChartPoint[] = [];
+
+    Object.entries(chartData.planets).forEach(([planetName, planetData]) => {
+      chartPointsToInsert.push({
+        user_id: userId,
+        name: planetName,
+        longitude: planetData.longitude,
+        latitude,
+        sign: planetData.sign,
+        house: calculateHousePosition(planetData.longitude, houseCusps),
+        degree: planetData.degree,
+        minute: planetData.minute,
+        second: planetData.second,
+        planet_type: ['northNode'].includes(planetName)
+          ? 'point'
+          : ['chiron'].includes(planetName)
+          ? 'asteroid'
+          : 'planet',
+      });
+    });
+
+    (['ascendant', 'midheaven'] as const).forEach((point) => {
+      const pointData = chartData.houses[point];
+      chartPointsToInsert.push({
+        user_id: userId,
+        name: point,
+        longitude: pointData.longitude,
+        latitude,
+        sign: pointData.sign,
+        house: calculateHousePosition(pointData.longitude, houseCusps),
+        degree: pointData.degree,
+        minute: pointData.minute,
+        second: pointData.second,
+        planet_type: 'point',
+      });
+    });
+
+    for (const chartPoint of chartPointsToInsert) {
+      await db.execute(
+        `INSERT INTO user_chart 
+         (user_id, planet_name, longitude, latitude, sign, house, degree, minute, second, planet_type) 
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          chartPoint.user_id,
+          chartPoint.name,
+          chartPoint.longitude,
+          chartPoint.latitude,
+          chartPoint.sign,
+          chartPoint.house,
+          chartPoint.degree,
+          chartPoint.minute,
+          chartPoint.second,
+          chartPoint.planet_type,
+        ]
+      );
+    }
+
+    await db.commit();
+    return userId;
+  } catch (error) {
+    await db.rollback();
+    throw error;
+  } finally {
+    db.release();
+  }
+}
+
 export async function getUserChart(userId: number): Promise<ChartPoint[]> {
   const [rows]: any = await connection.execute(
     `SELECT planet_name AS name, longitude, latitude, sign, house, degree, minute, second, planet_type
