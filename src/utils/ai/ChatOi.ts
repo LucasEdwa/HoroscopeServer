@@ -138,3 +138,57 @@ Provide specific dates, practical advice, and actionable insights based on the a
     throw new Error('Unable to generate prediction at this time');
   }
 }
+
+export async function generateOracleQuestionSuggestions(email: string): Promise<string[]> {
+  try {
+    const userData = await getUserForQuery(email);
+    if (!userData) {
+      throw new Error('User data not found');
+    }
+
+    const userChart = formatChartForAI(userData.chartPoints || []);
+    const currentPlanets = await getCurrentPlanetsAdvanced();
+
+    const prompt = `
+You are an expert astrologer helping users explore their destiny through oracle questions.
+
+USER PROFILE:
+- Name: ${userData.username}
+- Birth: ${userData.birthdate} at ${userData.birthtime}
+- Location: ${userData.birth_city}, ${userData.birth_country}
+
+NATAL CHART:
+${userChart}
+
+CURRENT TRANSITS:
+${currentPlanets}
+
+Based on this person's birth chart and current transits, generate exactly 8 thought-provoking oracle questions they should ask. These questions should:
+- Be specific to their chart placements and current life cycles
+- Cover different life areas (love, career, health, personal growth, spirituality)
+- Help them gain clarity on important decisions
+- Invite deeper self-reflection
+- Be phrased as questions the user would ask the oracle
+
+Format your response as a numbered list (1-8) with ONLY the questions, nothing else. Each question on a new line starting with the number.
+
+Example format:
+1. How will my Jupiter return influence my career direction over the next year?
+2. What does my Saturn return teach me about commitment?
+...`;
+
+    const response = await askOpenAI('You are an expert astrologer.', prompt);
+    
+    // Parse the response into an array of questions
+    const questions = response
+      .split('\n')
+      .filter((line: string) => line.match(/^\d+\./))
+      .map((line: string) => line.replace(/^\d+\.\s*/, '').trim())
+      .filter((q: string) => q.length > 0);
+
+    return questions;
+  } catch (error) {
+    console.error('Error generating oracle question suggestions:', error);
+    throw new Error('Unable to generate question suggestions at this time');
+  }
+}

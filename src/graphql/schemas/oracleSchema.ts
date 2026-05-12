@@ -14,6 +14,12 @@ export const oracleTypeDefs = `
     generated_at: String!
   }
 
+  type OracleQuestionSuggestions {
+    email: String!
+    suggestions: [String!]!
+    generated_at: String!
+  }
+
   input AskOracleInput {
     email: String!
     question: String!

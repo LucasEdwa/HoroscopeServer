@@ -1,7 +1,7 @@
 import * as OracleService from '../../services/oracleService';
 import { OracleQuestion, AskOracleInput, FutureTimeframe } from '../../interfaces/oracleInterface';
 import { GraphQLError } from 'graphql';
-import { askComprehensiveFuture } from '../../utils/ai/ChatOi';
+import { askComprehensiveFuture, generateOracleQuestionSuggestions } from '../../utils/ai/ChatOi';
 import { Request } from 'express';
 import { requireAuth, requireOwnership } from '../../utils/auth/authUtils';
 
@@ -101,6 +101,39 @@ export const oracleResolvers = {
         console.error('Error generating comprehensive future:', error);
         if (error instanceof GraphQLError) throw error;
         throw new GraphQLError('Failed to generate future prediction');
+      }
+    },
+
+    getOracleQuestionSuggestions: async (args: any, context: { req: Request }) => {
+      try {
+        const authenticatedUser = requireAuth(context);
+        
+        const email = args.email;
+        
+        if (!email || !email.trim()) {
+          throw new GraphQLError('Email is required');
+        }
+
+        // Validate email format
+        const emailValidation = validateEmail(email);
+        if (!emailValidation.isValid) {
+          throw new GraphQLError(emailValidation.message);
+        }
+
+        // Ensure user can only get suggestions for their own email
+        requireOwnership(authenticatedUser, email);
+
+        const suggestions = await generateOracleQuestionSuggestions(email);
+        
+        return {
+          email,
+          suggestions,
+          generated_at: new Date().toISOString()
+        };
+      } catch (error) {
+        console.error('Error generating oracle question suggestions:', error);
+        if (error instanceof GraphQLError) throw error;
+        throw new GraphQLError('Failed to generate question suggestions');
       }
     },
   },

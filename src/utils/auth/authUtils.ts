@@ -7,32 +7,42 @@ export interface AuthenticatedUser {
   email: string;
 }
 
+function getHeaderValue(value: string | string[] | undefined): string | undefined {
+  if (!value) {
+    return undefined;
+  }
+
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function buildBearerHeader(tokenHeader: string | undefined): string | undefined {
+  if (!tokenHeader) {
+    return undefined;
+  }
+
+  return tokenHeader.startsWith('Bearer ') ? tokenHeader : `Bearer ${tokenHeader}`;
+}
+
 /**
  * Extract and verify user from JWT token
  * @param authHeader Authorization header from request
  * @returns Authenticated user or null if invalid
  */
 export function getUserFromToken(authHeader: string | undefined): AuthenticatedUser | null {
-  console.log('Debug: getUserFromToken called with authHeader:', authHeader);
-  
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    console.log('Debug: No valid Authorization header found');
     return null;
   }
 
   const token = authHeader.split(' ')[1];
-  console.log('Debug: Extracted token:', token);
   
   try {
     if (!process.env.JWT_SECRET) {
       throw new Error('JWT_SECRET is not set');
     }
-    console.log('Debug: JWT_SECRET exists, verifying token...');
     const decoded = jwt.verify(token, process.env.JWT_SECRET) as AuthenticatedUser;
-    console.log('Debug: Token verified successfully, decoded:', decoded);
     return decoded;
   } catch (error) {
-    console.error('Debug: Token verification failed:', error);
+    console.error('Token verification failed:', error);
     return null;
   }
 }
@@ -44,15 +54,15 @@ export function getUserFromToken(authHeader: string | undefined): AuthenticatedU
  * @throws Error if not authenticated
  */
 export function requireAuth(context: { req: Request }): AuthenticatedUser {
-  console.log('Debug: requireAuth called with context:', context);
-  console.log('Debug: Request headers:', context.req.headers);
-  
-  const authenticatedUser = getUserFromToken(context.req.headers.authorization);
+  const authorizationHeader = getHeaderValue(context.req.headers.authorization);
+  const xAccessToken = getHeaderValue(context.req.headers['x-access-token']);
+  const authHeader = authorizationHeader || buildBearerHeader(xAccessToken);
+
+  const authenticatedUser = getUserFromToken(authHeader);
   if (!authenticatedUser) {
-    console.log('Debug: Authentication failed - no valid user found');
-    throw new Error('Authentication required');
+    throw new Error('Authentication required. Send Authorization: Bearer <token> header.');
   }
-  console.log('Debug: Authentication successful for user:', authenticatedUser);
+
   return authenticatedUser;
 }
 

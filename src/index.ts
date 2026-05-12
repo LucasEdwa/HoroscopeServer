@@ -33,6 +33,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
+
 // Define GraphQL schema and resolvers
 const typeDefs = `
   ${userTypeDefs}
@@ -43,6 +44,7 @@ const typeDefs = `
     getOracleHistory(email: String!): [OracleQuestion!]!
     getOracleQuestion(id: Int!): OracleQuestion
     getComprehensiveFuture(email: String!, timeframe: String): ComprehensiveFuture!
+    getOracleQuestionSuggestions(email: String!): OracleQuestionSuggestions!
   }
 
   extend type Mutation {
@@ -67,6 +69,7 @@ const createRootValue = (context: any) => {
     getOracleHistory: (args: any) => oracleResolvers.Query?.getOracleHistory(args, context),
     getOracleQuestion: (args: any) => oracleResolvers.Query?.getOracleQuestion(args, context),
     getComprehensiveFuture: (args: any) => oracleResolvers.Query?.getComprehensiveFuture(args, context),
+    getOracleQuestionSuggestions: (args: any) => oracleResolvers.Query?.getOracleQuestionSuggestions(args, context),
     
     // Oracle mutations
     submitOracleQuestion: (args: any) => oracleResolvers.Mutation?.submitOracleQuestion(args, context),

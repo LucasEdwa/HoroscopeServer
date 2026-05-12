@@ -2,6 +2,35 @@
 
 This resolver handles all Oracle-related GraphQL operations including asking questions, retrieving history, and generating comprehensive future predictions.
 
+## Authentication (Required)
+
+All Oracle queries and mutations require authentication.
+
+Send one of the headers below:
+- Authorization: Bearer <JWT_TOKEN>
+- x-access-token: <JWT_TOKEN>
+
+Get the token first with signin:
+
+```graphql
+mutation {
+  signin(email: "user@example.com", password: "your-password") {
+    success
+    token
+  }
+}
+```
+
+Then include the token in requests.
+
+Playground HTTP Headers:
+
+```json
+{
+  "Authorization": "Bearer YOUR_TOKEN_HERE"
+}
+```
+
 ## Queries
 
 ### `getOracleHistory`
@@ -28,14 +57,14 @@ query {
 Retrieves a specific Oracle question by ID.
 
 **Arguments:**
-- `id` (String, required): Question ID
+- `id` (Int, required): Question ID
 
 **Returns:** OracleQuestion object or null
 
 **Example:**
 ```graphql
 query {
-  getOracleQuestion(id: "question-id") {
+  getOracleQuestion(id: 1) {
     id
     question
     answer
@@ -96,15 +125,37 @@ mutation {
 Deletes a specific Oracle question.
 
 **Arguments:**
-- `id` (String, required): Question ID to delete
+- `id` (Int, required): Question ID to delete
 
-**Returns:** Boolean indicating success
+**Returns:** Deleted OracleQuestion object
 
 **Example:**
 ```graphql
 mutation {
-  deleteOracleQuestion(id: "question-id")
+  deleteOracleQuestion(id: 1) {
+    id
+    question
+    answer
+    created_at
+  }
 }
+```
+
+## Common Auth Error
+
+If you see:
+- Authentication required
+- No valid Authorization header found
+
+The request was sent without token header.
+
+Use curl like this:
+
+```bash
+curl -X POST http://localhost:3001/graphql \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_TOKEN_HERE" \
+  -d '{"query":"mutation { submitOracleQuestion(input: {email: \"user@example.com\", question: \"What does my future hold?\"}) { id question answer created_at } }"}'
 ```
 
 ## Validation
